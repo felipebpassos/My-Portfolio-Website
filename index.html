@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimplifyWeb</title>
+    <link rel="icon" href="./img/logo1.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/wave.css">
+</head>
+
+<body>
+
+    <button id="logo" class="logo">
+        <h1>SIMPLIFY<div style="height: 7px; width: 7px; background-color: rgb(33, 156, 160); border-radius: 50%;">
+            </div>WEB</h1>
+    </button>
+
+    <nav>
+        <ul>
+            <div data-target="home">
+                <li class="clicked"></li>
+                <p class="clicked">Início</p>
+            </div>
+            <div data-target="sobre">
+                <li></li>
+                <p>Sobre</p>
+            </div>
+            <div data-target="produtos">
+                <li></li>
+                <p>Produtos</p>
+            </div>
+            <div data-target="soluções">
+                <li></li>
+                <p>Soluções</p>
+            </div>
+            <div data-target="habilidades">
+                <li></li>
+                <p>Habilidades</p>
+            </div>
+            <div data-target="contato">
+                <li></li>
+                <p>Contato</p>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="animation-container">
+        <div class="scroll-indicator">
+            <div class="deslize">
+                <span>D</span>
+                <span>E</span>
+                <span>S</span>
+                <span>L</span>
+                <span>I</span>
+                <span>Z</span>
+                <span>E</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="toggle-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16" viewBox="0 0 38 16">
+            <rect width="38" height="2" rx="0" ry="0" fill="white" />
+            <rect y="12" width="38" height="2" rx="0" ry="0" fill="white" />
+        </svg>
+    </button>
+
+
+    <div class="menu hidden">
+        <ul>
+            <li>Início</li>
+            <li>Sobre</li>
+            <li>Produtos</li>
+            <li>Soluções</li>
+            <li>Habilidades</li>
+            <li>Contato</li>
+        </ul>
+    </div>
+
+    <button class="close-menu hidden"><i class="fa-solid fa-xmark"></i></button>
+
+    <button class="language-translator"><img src="./img/google_translate.png" alt="Google Translate" /></button>
+
+    <section id="home">
+
+        <main>
+
+            <div class="apresentacao-principal">
+
+                <div class="fluid">
+
+                    <!--Waves Container-->
+                    <div>
+                        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                            <defs>
+                                <path id="gentle-wave"
+                                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(99, 171, 194,0.7)" />
+                                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(99, 171, 194,0.5)" />
+                                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(99, 171, 194,0.3)" />
+                                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(99, 171, 194)" />
+                            </g>
+                        </svg>
+                        <div class="bottom"></div>
+                    </div>
+                    <!--Waves end-->
+
+                </div>
+
+                <p class="cargo">Felipe Passos | Full Stack Developer</p>
+                <img src="./img/programmer.png" alt="">
+                <h1>Websites e Sistemas<br>personalizados para<br>sua empresa</h1>
+                <div class="contato-submit-box">
+                    <button id="contato-submit" class="contato-submit">Enviar Proposta</button>
+                </div>
+                <div class="descricao">
+                    <p>Web designer criativo, especialista na elaboração desde landing pages simples até sistemas
+                        completos e customizados, que
+                        potencializarão o seu negócio</p>
+                </div>
+            </div>
+
+        </main>
+
+    </section>
+
+    <section id="sobre">
+
+        <main>
+
+            <div class="section-box">
+
+                    <h4 class="section-title">Sobre</h4><br><br><br><br>               
+
+            </div>
+
+        </main>
+
+    </section>
+
+    <section id="produtos">
+
+        <main>
+
+            <div class="section-box">
+                <h4 class="section-title">Produtos</h4>
+            </div>
+
+        </main>
+
+    </section>
+
+    <section id="soluções">
+
+        <main>
+
+            <div class="section-box">
+                <h4 class="section-title">Soluções</h4>
+            </div>
+
+        </main>
+
+    </section>
+
+    <section id="habilidades">
+
+        <main>
+
+            <div class="section-box">
+                <h4 class="section-title">Habilidades</h4>
+            </div>
+
+        </main>
+
+    </section>
+
+    <section id="contato">
+
+        <main>
+
+            <div class="section-box">
+                <h4 class="section-title">Contato</h4>
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <script src="./js/select-page.js"></script>
+    <script src="./js/toggle-menu.js"></script>
+    <script src="./js/scroll-parallax.js"></script>
+
+</body>
+
+</html>
