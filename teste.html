@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG And CSS Waves</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+    <title>Alternar Divs</title>
+    <style>
+        .container {
+            display: flex;
+            overflow: hidden;
+            width: 300px; /* Largura do container */
+            position: relative;
+        }
+        
+        .content {
+            flex: 1;
+            width: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
 
+        .content.active {
+            display: flex;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+    </style>
+</head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="menu-icon"
-        onclick="toggleMenu()">
-        <line x1="4" y1="6" x2="20" y2="6" stroke="black" stroke-width="2" id="line1" />
-        <line x1="4" y1="12" x2="20" y2="12" stroke="black" stroke-width="2" id="line2" />
-    </svg>
+    <div class="container">
+        <div class="content active">Div 1</div>
+        <div class="content">Div 2</div>
+        <div class="content">Div 3</div>
+    </div>
+    <div class="arrow" id="prev">←</div>
+    <div class="arrow" id="next">→</div>
 
     <script>
-        function toggleMenu() {
-            var line1 = document.getElementById('line1');
-            var line2 = document.getElementById('line2');
+        const contentDivs = document.querySelectorAll('.content');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
 
-            if (line1.style.display === 'none') {
-                line1.style.display = 'block';
-                line2.style.display = 'block';
-            } else {
-                line1.style.display = 'none';
-                line2.style.display = 'none';
-            }
+        function updateButtons() {
+            prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
+            nextButton.style.display = currentIndex === contentDivs.length - 1 ? 'none' : 'block';
         }
+
+        updateButtons();
+
+        prevButton.addEventListener('click', () => {
+            contentDivs[currentIndex].classList.remove('active');
+            currentIndex = Math.max(currentIndex - 1, 0);
+            contentDivs[currentIndex].classList.add('active');
+            updateButtons();
+        });
+
+        nextButton.addEventListener('click', () => {
+            contentDivs[currentIndex].classList.remove('active');
+            currentIndex = Math.min(currentIndex + 1, contentDivs.length - 1);
+            contentDivs[currentIndex].classList.add('active');
+            updateButtons();
+        });
     </script>
-
-
 </body>
-
 </html>

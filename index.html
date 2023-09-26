@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimplifyWeb</title>
+    <title>Simplify Web</title>
     <link rel="icon" href="./img/logo1.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -30,6 +30,10 @@
                 <li></li>
                 <p>Sobre</p>
             </div>
+            <div data-target="portfolio">
+                <li></li>
+                <p>Portfolio</p>
+            </div>
             <div data-target="produtos">
                 <li></li>
                 <p>Produtos</p>
@@ -37,10 +41,6 @@
             <div data-target="soluções">
                 <li></li>
                 <p>Soluções</p>
-            </div>
-            <div data-target="habilidades">
-                <li></li>
-                <p>Habilidades</p>
             </div>
             <div data-target="contato">
                 <li></li>
@@ -75,9 +75,9 @@
         <ul>
             <li>Início</li>
             <li>Sobre</li>
+            <li>Portfolio</li>
             <li>Produtos</li>
             <li>Soluções</li>
-            <li>Habilidades</li>
             <li>Contato</li>
         </ul>
     </div>
@@ -138,8 +138,20 @@
 
             <div class="section-box">
 
-                    <h4 class="section-title">Sobre</h4><br><br><br><br>               
+                <h5 class="section-title">Sobre</h5><br><br><br><br>
 
+            </div>
+
+        </main>
+
+    </section>
+
+    <section id="portfolio">
+
+        <main>
+
+            <div class="section-box">
+                <h5 class="section-title">Portfolio</h5>
             </div>
 
         </main>
@@ -151,7 +163,7 @@
         <main>
 
             <div class="section-box">
-                <h4 class="section-title">Produtos</h4>
+                <h5 class="section-title">Produtos</h5>
             </div>
 
         </main>
@@ -163,19 +175,45 @@
         <main>
 
             <div class="section-box">
-                <h4 class="section-title">Soluções</h4>
-            </div>
 
-        </main>
+                <h5 class="section-title">Soluções</h5>
 
-    </section>
+                <div>
+                    <h3>UX/UI Design</h3>
 
-    <section id="habilidades">
+                    <p>Nossa equipe cria designs atraentes e intuitivos para o seu site, focando na experiência do
+                        usuário e nos objetivos do seu negócio. Garantimos que o site seja visualmente atraente e fácil de usar em todos os
+                        dispositivos.</p>
+                </div>
 
-        <main>
+                <div>
+                    <h3>Desenvolvimento Completo de Sites e Sistemas</h3>
 
-            <div class="section-box">
-                <h4 class="section-title">Habilidades</h4>
+                    <p>Criamos desde sites simples até sistemas avançados. Para sites simples, focamos em páginas
+                        informativas e atraentes, ideais para apresentar conteúdo e chamadas para uma ação ou venda,
+                        como
+                        informações da empresa e portfólios. Já nos sistemas avançados, desenvolvemos plataformas
+                        interativas capazes de realizar tarefas complexas e autônomas, gerenciar dados em tempo real e
+                        fornecer funcionalidades personalizadas, adaptando-se às necessidades inerentes ao seu negócio.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>SEO (Otimização de Mecanismos de Busca)</h3>
+
+                    <p>Otimizamos seu site para que ele seja facilmente encontrado nos motores de busca, aumentando sua
+                        visibilidade online e atraindo mais visitantes.</p>
+                </div>
+
+                <div>
+                    <h3>Integração</h3>
+
+                    <p>Integramos seu site com outras ferramentas e serviços, melhorando suas funcionalidades e
+                        eficiência.
+                        Isso permite que seu site faça mais do que apenas informar; ele pode interagir com outras
+                        plataformas e sistemas, tornando sua presença online mais poderosa.</p>
+                </div>
+
             </div>
 
         </main>
@@ -187,7 +225,29 @@
         <main>
 
             <div class="section-box">
-                <h4 class="section-title">Contato</h4>
+
+                <h5 class="section-title">Contato</h5>
+
+                <h1>Vamos Criar Algo Incrível Juntos</h1>
+
+                <h3>Solicite um orçamento personalizado e descubra como podemos transformar suas ideias em realidade.
+                </h3>
+
+                <hr>
+
+                <div class="foto-box"><img src="./img/perfil.png" alt="Felipe Passos"></div>
+
+                <div class="contatos">
+                    <button class="contato-btn">Fale Conosco</button>
+                    <ul class="redes-sociais">
+                        <li><a href="https://www.instagram.com/simplifyweb/" target="_blank"><button><i
+                                        class="fa-brands fa-instagram"></i></button></a></li>
+                        <li><a href="" target="_blank"><button><i class="fa-brands fa-github"></i></button></a></li>
+                        <li><a href="" target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
         </main>
@@ -198,6 +258,7 @@
     <script src="./js/select-page.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-parallax.js"></script>
+    <script src="./js/move-img.js"></script>
 
 </body>
 

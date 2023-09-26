@@ -1,5 +1,4 @@
 const navItems = document.querySelectorAll('nav div');
-const sections = document.querySelectorAll('section');
 const logoBtn = document.getElementById('logo');
 const ContatoBtn = document.getElementById('contato-submit');
 let currentSection = 0;
@@ -21,6 +20,29 @@ window.addEventListener('wheel', (event) => {
     setTimeout(() => {
         isScrolling = false;
     }, 700); // Defina o tempo de atraso aqui (1 segundo neste exemplo)
+});
+
+// Ouvinte de evento de teclado para detectar as teclas de seta para cima e para baixo
+window.addEventListener('keydown', (event) => {
+    if (isScrolling) return;
+    isScrolling = true;
+
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+        // Rolar para baixo ou para a próxima seção
+        currentSection = Math.min(currentSection + 1, sections.length - 1);
+    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+        // Rolar para cima ou para a seção anterior
+        currentSection = Math.max(currentSection - 1, 0);
+    }
+
+    scrollToSection(currentSection);
+
+    // Atualize os botões de navegação aqui
+    updateNavigationButtons(currentSection);
+
+    setTimeout(() => {
+        isScrolling = false;
+    }, 400); // Defina o tempo de atraso aqui (700ms neste exemplo)
 });
 
 logoBtn.addEventListener('click', function () {
@@ -57,6 +79,8 @@ navItems.forEach((item) => {
         updateNavigationButtons(currentSection);
     });
 });
+
+//FUNÇÔES
 
 function scrollToSection(index) {
     sections.forEach((section, i) => {
