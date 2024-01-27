@@ -15,6 +15,10 @@
 
 <body>
 
+    <div id="fundo-loader">
+        <div id="loader"></div>
+    </div>
+
     <button id="logo" class="logo">
         <h1>SIMPLIFY<div style="height: 7px; width: 7px; background-color: rgb(33, 156, 160); border-radius: 50%;">
             </div>WEB</h1>
@@ -122,7 +126,8 @@
                     <button id="contato-submit" class="contato-submit">Enviar Proposta</button>
                 </div>
                 <div class="descricao">
-                    <p>Web designer criativo, especialista na elaboração desde landing pages simples até sistemas
+                    <p>Web designer criativo, especialista na elaboração desde landing pages de alto padrão, até
+                        sistemas
                         completos e customizados, que
                         potencializarão o seu negócio</p>
                 </div>
@@ -171,54 +176,44 @@
     </section>
 
     <section id="soluções">
-
-        <main>
-
-            <div class="section-box">
-
-                <h5 class="section-title">Soluções</h5>
-
-                <div>
-                    <h3>UX/UI Design</h3>
-
-                    <p>Nossa equipe cria designs atraentes e intuitivos para o seu site, focando na experiência do
-                        usuário e nos objetivos do seu negócio. Garantimos que o site seja visualmente atraente e fácil de usar em todos os
-                        dispositivos.</p>
-                </div>
-
-                <div>
-                    <h3>Desenvolvimento Completo de Sites e Sistemas</h3>
-
-                    <p>Criamos desde sites simples até sistemas avançados. Para sites simples, focamos em páginas
-                        informativas e atraentes, ideais para apresentar conteúdo e chamadas para uma ação ou venda,
-                        como
-                        informações da empresa e portfólios. Já nos sistemas avançados, desenvolvemos plataformas
-                        interativas capazes de realizar tarefas complexas e autônomas, gerenciar dados em tempo real e
-                        fornecer funcionalidades personalizadas, adaptando-se às necessidades inerentes ao seu negócio.
-                    </p>
-                </div>
-
-                <div>
-                    <h3>SEO (Otimização de Mecanismos de Busca)</h3>
-
-                    <p>Otimizamos seu site para que ele seja facilmente encontrado nos motores de busca, aumentando sua
-                        visibilidade online e atraindo mais visitantes.</p>
-                </div>
-
-                <div>
-                    <h3>Integração</h3>
-
-                    <p>Integramos seu site com outras ferramentas e serviços, melhorando suas funcionalidades e
-                        eficiência.
-                        Isso permite que seu site faça mais do que apenas informar; ele pode interagir com outras
-                        plataformas e sistemas, tornando sua presença online mais poderosa.</p>
-                </div>
-
+        <div class="section-box">
+            <h5 class="section-title">Soluções</h5>
+            <div>
+                <h3>Sites e Landing Pages</h3>
+                <ul>
+                    <li>Projetos customizados e exclusivos de alto padrão</li>
+                    <li>Ênfase em uma boa experiência do usuário (UX) e interfaces limpas e modernas (UI)</li>
+                    <li>Copywriting objetivo e técnicas de SEO (Otimização de Mecanismos de Busca)</li>
+                    <li>Compatibilidade com todos os dispositivos e navegadores</li>
+                    <li>Painel administrativo para edição sem necessidade de código</li>
+                </ul>
             </div>
 
-        </main>
+            <div>
+                <h3>Consultoria Digital e Marketing</h3>
+                <ul>
+                    <li>Pesquisa de mercado e posicionamento de marca</li>
+                    <li>Estruturação e estratégias para uma boa Presença Digital</li>
+                    <li>Gestão de Redes Sociais</li>
+                    <li>Campanhas e Gestão de Anúncios ADS</li>
+                </ul>
+            </div>
 
+            <div>
+                <h3>Sistemas e Integrações</h3>
+                <ul>
+                    <li>Sistemas eficientes, capazes de realizar tarefas complexas e autônomas</li>
+                    <li>E-commerces</li>
+                    <li>Foco em atender às necessidades específicas do seu negócio</li>
+                    <li>Segurança da informação e técnicas de autenticação e autorização</li>
+                    <li>Integrações com outras plataformas e APIs</li>
+                    <li>Suporte e manutenção</li>
+                </ul>
+            </div>
+
+        </div>
     </section>
+
 
     <section id="contato">
 
@@ -254,7 +249,7 @@
 
     </section>
 
-
+    <script src="./js/loading.js"></script>
     <script src="./js/select-page.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-parallax.js"></script>
