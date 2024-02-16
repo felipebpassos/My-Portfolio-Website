@@ -35,7 +35,7 @@ section {
     left: 0;
     overflow: hidden;
     transform: scale(0);
-    transition: filter 1.5s ease;
+    transition: filter 1s ease;
 }
 
 button {
@@ -77,7 +77,7 @@ a {
     z-index: 9997;
     color: white;
     font-family: 'Orbitron', sans-serif;
-    transition: filter 1.5s ease, transform 0.8s ease;
+    transition: filter 1s ease, transform 0.8s ease;
 }
 
 .logo h1 {
@@ -92,7 +92,7 @@ nav {
     top: 150px;
     left: 60px;
     z-index: 9997;
-    transition: filter 1.5s ease;
+    transition: filter 1s ease;
 }
 
 nav ul {
@@ -143,7 +143,7 @@ nav p.clicked {
     margin-left: 13px;
     top: 490px;
     transform: translateY(-50%);
-    transition: filter 1.5s ease;
+    transition: filter 1s ease;
 }
 
 .scroll-indicator {
@@ -221,7 +221,7 @@ nav p.clicked {
     background-color: transparent;
     color: white;
     z-index: 9997;
-    transition: filter 1.5s ease, transform 0.8s ease;
+    transition: filter 1s ease, transform 0.8s ease;
 }
 
 .toggle-menu,
@@ -232,6 +232,13 @@ nav p.clicked {
 
 .close-menu {
     font-size: 35px;
+}
+
+.toggle-menu svg {
+    width: 38px;
+    /* Defina a largura desejada */
+    height: 16px;
+    /* Defina a altura desejada */
 }
 
 .menu {
@@ -291,15 +298,22 @@ main {
 .section-box {
     margin: auto;
     position: relative;
-    display: flex;
 }
 
 .section-box {
     margin-top: 9vh;
     margin-bottom: 15vh;
     height: 76vh;
-    width: 72%;
-    transform: translateX(80px);
+    width: 60%;
+    transform: translateX(60px);
+}
+
+.section-box.contato {
+    width: 65%;
+}
+
+.section-content {
+    margin-top: 40px;
 }
 
 .apresentacao-principal {
@@ -330,10 +344,10 @@ main {
     font-family: 'Manrope', sans-serif;
     color: white;
     font-weight: 700;
-    font-size: 55px;
+    font-size: 56px;
     line-height: 1.2em;
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     left: 10%;
     z-index: 998;
@@ -390,15 +404,79 @@ main {
 .descricao p {
     font-family: 'Hind', sans-serif;
     color: rgb(220, 220, 220);
-    font-size: 1.07vw;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.6em;
     margin: 0;
 }
 
 .section-title {
-    color: rgb(33, 156, 160);
+    color: rgb(42, 217, 223);
     height: fit-content;
+}
+
+#sobre .texto {
+    font-size: 25px;
+    line-height: 1.6em;
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+}
+
+.servico {
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.servico h1 {
+    width: fit-content;
+    flex: 0.7;
+    font-size: 28px;
+    user-select: none;
+}
+
+.servico.left h1 {padding-right: 60px; font-size: 35px;}
+.servico.last h1 {font-size: 38px; flex: 0.5;}
+.servico.right h1 {padding-left: 60px;}
+
+.video-servico {
+    flex: 1;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.video-servico video {
+    filter: grayscale(0); /* Inicialmente, o vídeo é colorido */
+    transition: filter 0.8s ease;
+  }
+
+.servico:hover video {
+    filter: grayscale(100%);
+} 
+
+.video-servico span {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 13px;
+}
+
+.servico:hover span {
+    color: rgb(1, 181, 187);
+    font-weight: bold;
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 1); 
+}
+
+
+.popup-servicos {
+    display: none;
+    position: absolute;
 }
 
 #contato h1 {
@@ -502,28 +580,89 @@ main {
 }
 
 @media(max-width: 1100px) {
-    .logo, nav, .animation-container {left: 30px;}
-    .toggle-menu, .close-menu, .language-translator {right: 30px;}
+
+    .logo,
+    nav,
+    .animation-container {
+        left: 30px;
+    }
+
+    .toggle-menu,
+    .close-menu,
+    .language-translator {
+        right: 30px;
+    }
+
+    .descricao p {
+        font-size: 10px;
+    }
 }
 
 @media(max-width: 900px) {
-    nav p,
+
+    nav p {
+        font-size: 10px;
+    }
+
     .animation-container {
         display: none !important;
     }
-    .logo, nav, .animation-container {left: 30px;}
-    .toggle-menu, .close-menu, .language-translator {right: 30px;}
+
+    .logo,
+    nav,
+    .animation-container {
+        left: 30px;
+    }
+
+    .toggle-menu,
+    .close-menu,
+    .language-translator {
+        right: 30px;
+    }
+
+    .descricao p {
+        font-size: 9px;
+    }
+}
+
+@media(max-width: 720px) {
+
+    .cargo {
+        font-size: 10px;
+    }
+
+    .apresentacao-principal h1 {
+        font-size: 35px;
+    }
+
+    .apresentacao-principal img {
+        right: -60px;
+    }
+
+    .contato-submit {
+        font-size: 11px;
+    }
+
+    .descricao p {
+        font-size: 9px;
+    }
 }
 
 @media(min-height: 750px) {
-    nav {top: 200px;}
+    nav {
+        top: 200px;
+    }
+
     .animation-container {
         top: 540px;
     }
 }
 
 @media(min-height: 900px) {
-    nav {top: 250px;}
+    nav {
+        top: 250px;
+    }
+
     .animation-container {
         top: 690px;
     }
@@ -540,61 +679,124 @@ main {
         display: none !important;
     }
 
+    .logo,
+    .toggle-menu,
+    .close-menu {
+        top: 20px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .toggle-menu svg {
+        width: 28px;
+        height: 12px;
+    }
+
+    nav {
+        top: 100px;
+    }
+
     .apresentacao-principal h1 {
         font-size: 35px;
         top: 45%;
     }
+
     .cargo {
         font-size: 11px;
     }
+
     .contato-submit-box {
         left: 9%;
         bottom: 35px;
     }
 
-    .descricao {padding: 18px 30px;}
-    
+    .descricao {
+        padding: 18px 30px;
+    }
+
     .contato-submit {
         font-size: 11px;
     }
 }
 
 @media(max-height: 390px) {
-    .logo, .toggle-menu, .close-menu {top: 20px;}
-    .language-translator {top: 80px;}
+
+    .language-translator {
+        top: 80px;
+    }
+
+    nav li {
+        margin: 8px 0;
+        width: 6px;
+        height: 6px;
+    }
+
     .apresentacao-principal img {
         min-height: 300px;
     }
+
     .apresentacao-principal h1 {
         font-size: 26px;
         top: 45%;
     }
+
     .cargo {
         font-size: 9px;
     }
+
     .contato-submit-box {
         left: 9%;
         bottom: 20px;
     }
-    
+
     .contato-submit {
         font-size: 9px;
     }
 }
 
 @media(max-height: 320px) {
-    .logo h1 {font-size: 18px;}
-    nav {top: 70px;}
-    nav li {height: 6px; width: 6px;}
+    nav {
+        top: 70px;
+    }
+
+    nav li {
+        height: 6px;
+        width: 6px;
+    }
+
     .apresentacao-principal img {
         min-height: 200px;
     }
+
     .apresentacao-principal {
         margin-top: 28vh;
         height: 72vh;
     }
+
     .cargo {
         margin-top: 20px;
+    }
+
+}
+
+@media(max-height: 280px) {
+
+    nav p {
+        font-size: 9px;
+    }
+
+    .apresentacao-principal h1 {
+        font-size: 24px;
+    }
+
+    .apresentacao-principal img {
+        right: 15px;
+    }
+
+    .descricao p {
+        font-size: 7px;
     }
 }
 
