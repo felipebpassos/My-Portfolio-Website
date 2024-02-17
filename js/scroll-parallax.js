@@ -52,7 +52,7 @@ logoBtn.addEventListener('click', function () {
 });
 
 ContatoBtn.addEventListener('click', function () {
-    currentSection = 5;
+    currentSection = 4;
     scrollToSection(currentSection);
     updateNavigationButtons(currentSection);
 });
