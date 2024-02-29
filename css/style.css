@@ -12,6 +12,8 @@ body {
     color: white;
     width: 100vw;
     height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
     display: flex;
     position: relative;
     background-color: rgb(15, 15, 15);
@@ -28,6 +30,8 @@ body {
 
 section {
     height: 100vh;
+    max-height: 100vh;
+    max-width: 100%;
     width: 100%;
     display: flex;
     position: absolute;
@@ -109,9 +113,9 @@ nav ul div {
 nav li {
     width: 10px;
     height: 10px;
-    border: 3px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    margin: 13px 0;
+    margin: 12px 0;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
@@ -173,7 +177,7 @@ nav p.clicked {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: 3px solid #cccccc;
+    border: 1px solid #cccccc;
     box-sizing: border-box;
 }
 
@@ -207,6 +211,45 @@ nav p.clicked {
     }
 }
 
+.language-translator {
+    position: relative;
+}
+
+.language-translator .op-language {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.language-translator:hover .op-language {
+    display: block;
+}
+
+.language-translator .op-language a {
+    display: block;
+}
+
+.language-translator .op-language button {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 3px;
+    background-color: rgba(41, 41, 41, 0.5);
+    border: none;
+    transition: all 0.8s ease;
+}
+
+.language-translator .op-language button:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+}
+
+.op-language img {
+    min-width: 30px;
+    max-width: 40px;
+    height: auto;
+}
+
 .toggle-menu,
 .close-menu,
 .language-translator {
@@ -220,14 +263,42 @@ nav p.clicked {
     transition: filter 1s ease, transform 0.8s ease;
 }
 
-.toggle-menu,
-.close-menu {
+.toggle-menu {
     top: 40px;
     right: 40px;
 }
 
 .close-menu {
     font-size: 35px;
+    top: 30px;
+    right: 40px;
+    padding: 0;
+}
+
+.close {
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.close-ring {
+    transform: rotate(-90deg);
+    position: relative;
+}
+
+.close-ring__circle {
+    stroke-dasharray: 188.496;
+    /* Circunferência do círculo completo (2 * π * raio) */
+    stroke-dashoffset: 188.496;
+    transition: stroke-dashoffset 0.6s;
+    /* Ajuste o tempo da animação para 5 segundos */
+}
+
+.x {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
 }
 
 .toggle-menu svg {
@@ -323,7 +394,8 @@ main {
     color: black;
     margin-left: 10%;
     margin-top: 40px;
-    font-size: 15px;
+    font-size: 18px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .apresentacao-principal img {
@@ -340,7 +412,7 @@ main {
     font-family: 'Manrope', sans-serif;
     color: white;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 52px;
     line-height: 1.2em;
     position: absolute;
     top: 45%;
@@ -412,14 +484,93 @@ main {
 }
 
 #sobre .texto {
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.6em;
     font-weight: 500;
     font-family: 'Manrope', sans-serif;
 }
 
+#portfolio {
+    height: calc(100vh - 20px);
+    width: calc(100% - 10px);
+    padding: 10px;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.portfolio {
+    flex: 1;
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+    margin-right: 10px;
+    position: relative;
+}
+
+.portfolio:hover {
+    cursor: none;
+}
+
+.portfolio-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s ease;
+}
+
+.portfolio:hover img {
+    filter: grayscale(1);
+}
+
+.portfolio h1 {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    z-index: 2;
+    font-family: 'Hind', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+    transition: all 0.8s ease;
+}
+
+.portfolio:hover h1 {
+    transform: translateY(-220px);
+}
+
+.custom-cursor {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(42, 217, 223);
+    /* Cor do círculo */
+    border-radius: 50%;
+    /* Torna o elemento um círculo */
+    color: rgb(15, 15, 15);
+    /* Cor do texto */
+    text-align: center;
+    line-height: 120px;
+    /* Centraliza verticalmente o texto */
+    font-size: 16px;
+    /* Tamanho da fonte do texto */
+    display: none;
+    /* Oculta o círculo por padrão */
+    z-index: 3;
+}
+
 .servico {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     position: relative;
     display: flex;
     align-items: center;
@@ -429,13 +580,23 @@ main {
 .servico h1 {
     width: fit-content;
     flex: 0.7;
-    font-size: 28px;
+    font-size: 25px;
     user-select: none;
+    font-weight: 600;
 }
 
-.servico.left h1 {padding-right: 60px; font-size: 35px;}
-.servico.last h1 {font-size: 38px; flex: 0.5;}
-.servico.right h1 {padding-left: 60px;}
+.servico.left h1 {
+    padding-right: 50px;
+    font-size: 30px;
+}
+
+.servico.last h1 {
+    font-size: 28px;
+}
+
+.servico.right h1 {
+    padding-left: 60px;
+}
 
 .video-servico {
     flex: 1;
@@ -448,13 +609,14 @@ main {
 }
 
 .video-servico video {
-    filter: grayscale(0); /* Inicialmente, o vídeo é colorido */
+    filter: grayscale(0);
+    /* Inicialmente, o vídeo é colorido */
     transition: filter 0.8s ease;
-  }
+}
 
 .servico:hover video {
     filter: grayscale(100%);
-} 
+}
 
 .video-servico span {
     position: absolute;
@@ -466,9 +628,8 @@ main {
 .servico:hover span {
     color: rgb(1, 181, 187);
     font-weight: bold;
-    text-shadow: 0px 0px 12px rgba(0, 0, 0, 1); 
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
 }
-
 
 .popup-servicos {
     display: none;
@@ -563,6 +724,26 @@ main {
 
 .redes-sociais li button:hover {
     color: rgba(255, 255, 255, 0.9);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9998;
+    background-color: rgb(15, 15, 15);
+}
+
+.close-popup {
+    position: absolute;
+    padding: 10px;
+    z-index: 9999;
+    font-size: 35px;
+    top: 30px;
+    right: 40px;
+    padding: 0;
 }
 
 @media(max-width: 1024px) {

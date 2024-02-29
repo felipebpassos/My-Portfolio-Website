@@ -1,6 +1,8 @@
 const navItems = document.querySelectorAll('nav div');
 const logoBtn = document.getElementById('logo');
+const scrollIcon = document.getElementById('scroll-ico');
 const ContatoBtn = document.getElementById('contato-submit');
+const menuItems = document.querySelectorAll('.menu li');
 let currentSection = 0;
 let isScrolling = false;
 
@@ -80,6 +82,32 @@ navItems.forEach((item) => {
     });
 });
 
+// Adicione um ouvinte de clique a cada item do menu
+menuItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        // Atualize o índice da seção atual para corresponder ao índice do item clicado no menu
+        currentSection = index;
+
+        sections.forEach(section => {
+            section.classList.remove('blur');
+        });
+        animation.classList.remove('blur');
+        translation.classList.remove('blur');
+        toggleMenuButton.classList.remove('hidden');
+        closeMenu.classList.add('hidden');
+        menu.classList.add('hidden');
+        logo.classList.remove('blur');
+        navg.classList.remove('blur');
+        menuLi.classList.remove('ativo');
+
+        // Rolar para a seção correspondente
+        scrollToSection(currentSection);
+
+        // Atualize os botões de navegação aqui
+        updateNavigationButtons(currentSection);
+    });
+});
+
 //FUNÇÔES
 
 function scrollToSection(index) {
@@ -93,7 +121,15 @@ function updateNavigationButtons(currentIndex) {
     // Remova a classe "clicked" de todos os botões de navegação
     navItems.forEach(navItem => {
         navItem.querySelector('li').classList.remove('clicked');
-        navItem.querySelector('p').classList.remove('clicked');
+        const paragraph = navItem.querySelector('p');
+        paragraph.classList.remove('clicked');
+
+        // Verifique se currentIndex é igual a 2 para ocultar o parágrafo
+        if (currentIndex === 2) {
+            paragraph.style.display = 'none';
+        } else {
+            paragraph.style.display = 'block';
+        }
     });
 
     // Adicione a classe "clicked" ao botão de navegação correspondente à seção atual
@@ -101,3 +137,5 @@ function updateNavigationButtons(currentIndex) {
     currentNavItem.querySelector('li').classList.add('clicked');
     currentNavItem.querySelector('p').classList.add('clicked');
 }
+
+

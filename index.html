@@ -20,8 +20,9 @@
     </div>
 
     <button id="logo" class="logo">
-        <h1>SIMPLIFY<div style="height: 7px; width: 7px; background-color: rgb(33, 156, 160); border-radius: 50%;">
-            </div>WEB</h1>
+        <h1 style="font-size: 26px;">S<div
+                style="margin-left: 5px; height: 7px; width: 7px; background-color: rgb(33, 156, 160); border-radius: 50%;">
+            </div>W</h1>
     </button>
 
     <nav>
@@ -49,7 +50,7 @@
         </ul>
     </nav>
 
-    <div class="animation-container">
+    <div class="animation-container" id="scroll-ico" style="display: none;">
         <div class="scroll-indicator">
             <div class="scroll-icon-container">
                 <div class="scroll-icon">
@@ -78,9 +79,31 @@
         </ul>
     </div>
 
-    <button class="close-menu hidden"><i class="fa-solid fa-xmark"></i></button>
+    <div class="close-menu hidden">
+        <div class="close" onmouseover="startAnimation()" onmouseout="resetAnimation()">
+            <svg class="close-ring" width="61" height="61">
+                <circle class="close-ring__circle" id="closeCircle" stroke="rgb(42, 217, 223)" stroke-width="2"
+                    fill="transparent" r="28" cx="30" cy="30" />
+                <circle class="close-ring__circle-full" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2"
+                    fill="transparent" r="28" cx="30" cy="30" />
+            </svg>
+            <svg class="x" viewBox="0 0 12 12" style="height: 12px; width: 12px;">
+                <path stroke="rgb(180, 180, 180)" fill="rgb(180, 180, 180)"
+                    d="M4.674 6L.344 1.05A.5.5 0 0 1 1.05.343L6 4.674l4.95-4.33a.5.5 0 0 1 .707.706L7.326 6l4.33 4.95a.5.5 0 0 1-.706.707L6 7.326l-4.95 4.33a.5.5 0 0 1-.707-.706L4.674 6z">
+                </path>
+            </svg>
+        </div>
+    </div>
 
-    <button class="language-translator"><img src="./img/google_translate.png" alt="Google Translate" /></button>
+    <div class="language-translator">
+        <img src="./img/google_translate.png" alt="Google Translate" />
+        <div class="op-language">
+            <div style="margin-top: 5px;">
+                <a href="#"><button><img src="./img/brazil.jpg" alt="Português (BR)"></button></a>
+                <a href="./en"><button><img src="./img/en.jpg" alt="Inglês"></button></a>
+            </div>
+        </div>
+    </div>
 
     <section id="home">
 
@@ -119,8 +142,8 @@
                 </div>
                 <div class="descricao">
                     <p>Web designer criativo, especialista na elaboração desde landing pages de alto padrão, até
-                        sistemas
-                        completos e customizados, que
+                        aplicações web
+                        completas e customizadas, que
                         potencializarão o seu negócio</p>
                 </div>
             </div>
@@ -138,8 +161,9 @@
                 <h5 class="section-title">Sobre</h5>
 
                 <div class="section-content">
-                    <p class="texto">Com ampla experiência em projetos diversos, desde sites personalizados até o desenvolvimento completo de softwares
-                        e sistemas robustos, nossa missão é impulsionar sua empresa a
+                    <p class="texto">Com ampla experiência em projetos diversos, desde sites personalizados até o
+                        desenvolvimento completo de softwares
+                        e sistemas Web robustos, nossa missão é impulsionar sua empresa a
                         conquistar grandes resultados no crescente e amplo mercado digital.</p>
                 </div>
 
@@ -151,13 +175,18 @@
 
     <section id="portfolio">
 
-        <main>
-
-            <div class="section-box">
-                <h5 class="section-title">Portfolio</h5>
+        <div class="portfolio">
+            <div class="portfolio-container">
+                <img src="./img/portfolio1.jpg" alt="">
+                <h1>Área de Membros</h1>
             </div>
-
-        </main>
+        </div>
+        <div class="portfolio">
+            <div class="portfolio-container">
+                <img src="./img/portfolio2.png" alt="">
+                <h1>Landing Page</h1>
+            </div>
+        </div>
 
     </section>
 
@@ -181,11 +210,12 @@
                             otimizado</li>
                         <li>Copywriting assertivo e SEO: melhore sua visibilidade nos motores de busca e atraia novos
                             clientes</li>
-                        <li>Responsividade e acessibilidade: compatibilidade com todos os dispositivos e navegadores</li>
+                        <li>Responsividade e acessibilidade: compatibilidade com todos os dispositivos e navegadores
+                        </li>
                         <li>Painel administrativo para edição sem necessidade de usar código</li>
                     </ul>
                 </div>
-    
+
                 <div class="servico right">
                     <div class="video-servico">
                         <video autoplay muted loop width="100%">
@@ -202,9 +232,9 @@
                         <li>Campanhas e Gestão de Anúncios ADS</li>
                     </ul>
                 </div>
-    
+
                 <div class="servico left last">
-                    <h1 style="margin-bottom: 15px;">Sistemas e Softwares</h1>
+                    <h1 style="margin-bottom: 15px;">Aplicações Web</h1>
                     <div class="video-servico">
                         <video autoplay muted loop width="100%">
                             <source src="./videos/typing.mp4" type="video/mp4">
@@ -245,13 +275,15 @@
                 <div class="foto-box"><img src="./img/perfil.png" alt="Felipe Passos"></div>
 
                 <div class="contatos">
-                    <button class="contato-btn">Fale Conosco</button>
+                    <button class="contato-btn" id="contato-btn">Fale Conosco</button>
                     <ul class="redes-sociais">
                         <li><a href="https://www.instagram.com/simplifyweb/" target="_blank"><button><i
                                         class="fa-brands fa-instagram"></i></button></a></li>
                         <li><a href="" target="_blank"><button><i class="fa-brands fa-github"></i></button></a></li>
                         <li><a href="" target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
                         </li>
+                        <li><a href="https://dribbble.com/simplifyweb" target="_blank"><button><i
+                                        class="fa-brands fa-dribbble"></i></button></a></li>
                     </ul>
                 </div>
 
@@ -261,11 +293,67 @@
 
     </section>
 
+    <div class="popup hidden" id="contato-form">
+
+        <div class="close-popup">
+            <div class="close" id="close-contato" onmouseover="startAnimation()" onmouseout="resetAnimation()">
+                <svg class="close-ring" width="61" height="61">
+                    <circle class="close-ring__circle" id="closeCircle" stroke="rgb(42, 217, 223)" stroke-width="2"
+                        fill="transparent" r="28" cx="30" cy="30" />
+                    <circle class="close-ring__circle-full" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2"
+                        fill="transparent" r="28" cx="30" cy="30" />
+                </svg>
+                <svg class="x" viewBox="0 0 12 12" style="height: 12px; width: 12px;">
+                    <path stroke="rgb(180, 180, 180)" fill="rgb(180, 180, 180)"
+                        d="M4.674 6L.344 1.05A.5.5 0 0 1 1.05.343L6 4.674l4.95-4.33a.5.5 0 0 1 .707.706L7.326 6l4.33 4.95a.5.5 0 0 1-.706.707L6 7.326l-4.95 4.33a.5.5 0 0 1-.707-.706L4.674 6z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <form action="">
+                    <div class="row">
+                        <div class="m-3 col">
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" placeholder="Qual seu nome?" required>
+                        </div>
+                        <div class="m-3 col">
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Qual seu email?" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="m-3 col">
+                            <label for=""></label>
+                            <input type="text">
+                        </div>
+                        <div class="m-3 col">
+                            <label for=""></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="m-3">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script src="./js/loading.js"></script>
     <script src="./js/select-page.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-parallax.js"></script>
     <script src="./js/move-img.js"></script>
+    <script src="./js/close-animation.js"></script>
+    <script src="./js/cursor.js"></script>
+    <script src="./js/popups.js"></script>
 
 </body>
 

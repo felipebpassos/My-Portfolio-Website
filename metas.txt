@@ -1,0 +1,23 @@
+Mudar foto - Início
+
+Fazer a parte de baixo: opinião de clientes - Sobre
+
+Abrir e criar popup de portifolio - Portfolio
+Criar carrossel de portfolio - Portfolio
+
+Fazer popup de explicação do serviço - Soluções
+
+Fazer popup com formulário de contato - Contato
+
+
+Todas as páginas:
+
+	Responsividade
+	Efeito Paralax
+
+
+
+
+
+
+
