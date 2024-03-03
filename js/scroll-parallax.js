@@ -1,5 +1,7 @@
 const navItems = document.querySelectorAll('nav div');
 const logoBtn = document.getElementById('logo');
+const portfolio = document.getElementById('portfolios');
+const solucoes = document.getElementById('solucoes');
 const scrollIcon = document.getElementById('scroll-ico');
 const ContatoBtn = document.getElementById('contato-submit');
 const menuItems = document.querySelectorAll('.menu li');
@@ -55,6 +57,18 @@ logoBtn.addEventListener('click', function () {
 
 ContatoBtn.addEventListener('click', function () {
     currentSection = 4;
+    scrollToSection(currentSection);
+    updateNavigationButtons(currentSection);
+});
+
+portfolio.addEventListener('click', function () {
+    currentSection = 2;
+    scrollToSection(currentSection);
+    updateNavigationButtons(currentSection);
+});
+
+solucoes.addEventListener('click', function () {
+    currentSection = 3;
     scrollToSection(currentSection);
     updateNavigationButtons(currentSection);
 });

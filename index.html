@@ -40,9 +40,9 @@
                 <li></li>
                 <p>Portfolio</p>
             </div>
-            <div data-target="soluções">
+            <div data-target="servicos">
                 <li></li>
-                <p>Soluções</p>
+                <p>Serviços</p>
             </div>
             <div data-target="contato">
                 <li></li>
@@ -75,7 +75,7 @@
             <li>Início</li>
             <li>Sobre</li>
             <li>Portfolio</li>
-            <li>Soluções</li>
+            <li>Serviços</li>
             <li>Contato</li>
         </ul>
     </div>
@@ -120,7 +120,7 @@
                             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                             <defs>
                                 <path id="gentle-wave"
-                                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+                                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                             </defs>
                             <g class="parallax">
                                 <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(99, 171, 194,0.7)" />
@@ -177,11 +177,16 @@
                             <li>
                                 <img src="./img/pomar.png" alt="Pomar Polpa de Frutas">
                             </li>
-                            <li>
+                            <li id="vip">
                                 <img src="./img/vip.png" alt="VIP Informática">
                             </li>
                         </ul>
                     </div>
+                    <ul class="opcoes">
+                        <li id="habilidades">Habilidades</li>
+                        <li id="portfolios">Portfolio</li>
+                        <li id="solucoes">Soluções</li>
+                    </ul>
                 </div>
 
             </div>
@@ -207,9 +212,9 @@
 
     </section>
 
-    <section id="soluções">
+    <section id="servicos">
         <div class="section-box">
-            <h5 class="section-title">Soluções</h5>
+            <h5 class="section-title">Serviços</h5>
 
             <div class="section-content">
                 <div class="servico left">
@@ -331,6 +336,9 @@
         <div class="formulario">
             <div class="row">
                 <form action="">
+                    <h3>Tem algum projeto em mente? Entre em contato se quiser trabalhar junto em algo empolgante.
+                        Grande ou
+                        pequeno. Web ou Mobile.</h3>
                     <div class="row">
                         <div class="m-3 col">
                             <label for="nome">Seu nome</label>
@@ -355,13 +363,20 @@
                         <label for="mensagem">Mensagem</label>
                         <textarea id="mensagem" name="mensagem"></textarea>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LdstYYpAAAAABI2ljAiFx1xMEP-E0dcIZYdzVJI" style="margin-left: 15px; margin-bottom: 30px;"></div>
-                    <button type="submit">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" space="preserve">
-                            <path fill="#ffffff" d="M16,17H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H16a2,2,0,0,1,2,2V15A2,2,0,0,1,16,17Zm0-2V7.619l-6,4.242L4,7.619V15H16ZM4,5V5.705l6,3.429,6-3.429V5H4Z"></path>
-                        </svg>
-                        Enviar mensagem
-                    </button>
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <button type="submit">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"
+                                x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20"
+                                enable-background="new 0 0 20 20" space="preserve">
+                                <path fill="#ffffff"
+                                    d="M16,17H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H16a2,2,0,0,1,2,2V15A2,2,0,0,1,16,17Zm0-2V7.619l-6,4.242L4,7.619V15H16ZM4,5V5.705l6,3.429,6-3.429V5H4Z">
+                                </path>
+                            </svg>
+                            Enviar mensagem
+                        </button>
+                        <div class="g-recaptcha" data-sitekey="6LdstYYpAAAAABI2ljAiFx1xMEP-E0dcIZYdzVJI"
+                            style="margin-left: 15px; margin-bottom: 30px;" data-theme="dark"></div>
+                    </div>
                 </form>
             </div>
         </div>
