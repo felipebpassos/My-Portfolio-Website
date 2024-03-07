@@ -62,13 +62,82 @@ a {
 
 #loader {
     height: 50px;
-    width: 300px;
+    width: 220px;
     background: rgb(15, 15, 15) url("http://localhost/simplifyweb.com.br/img/simplifyweb.png") center/cover no-repeat;
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+}
+
+.loading-animation {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    /* Ajuste conforme necessário */
+    height: 50px;
+    /* Ajuste conforme necessário */
+    position: relative;
+    transform: translateX(20px);
+}
+
+.ball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    /* Ajuste conforme necessário */
+    height: 15px;
+    /* Ajuste conforme necessário */
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    /* Cor da bola */
+    opacity: 0;
+    animation: moveRight 2s infinite linear;
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    25% {
+        opacity: 0.7;
+        transform: translateX(-60px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    75% {
+        opacity: 0.7;
+        transform: translateX(60px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+}
+
+.ball1 {
+    animation-delay: 0s;
+    /* Tempo de atraso para a primeira bola */
+}
+
+.ball2 {
+    animation-delay: 0.67s;
+    /* Tempo de atraso para a segunda bola */
+}
+
+.ball3 {
+    animation-delay: 1.33s;
+    /* Tempo de atraso para a terceira bola */
 }
 
 .logo {
@@ -130,6 +199,7 @@ nav p {
     transition: 0.4s ease-in-out;
     opacity: 0.2;
     cursor: pointer;
+    letter-spacing: 0.08em;
 }
 
 nav p:hover {
@@ -394,8 +464,9 @@ main {
     color: black;
     margin-left: 10%;
     margin-top: 40px;
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.1em;
 }
 
 .apresentacao-principal img {
@@ -518,6 +589,7 @@ main {
 
 #palazzo img {
     height: 100px !important;
+    filter: saturate(220%);
 }
 
 #ultimate img {
@@ -528,12 +600,64 @@ main {
     height: 50px !important;
 }
 
-.opcoes {
+.saiba-mais-box {
+    position: fixed;
+    bottom: 0;
+    margin-left: 60px;
+    margin-right: 30px;
+    height: 100px;
+    width: calc(100% - 90px);
+}
+
+.saiba-mais {
+    width: 60%;
+    transform: translateX(60px);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    transition: all 1.5s ease;
+    opacity: 1;
+}
+
+.saiba-mais span {
+    padding: 12px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.18em;
+    user-select: none;
+}
+
+.saiba-mais.fade {
+    opacity: 0;
+}
+
+.menu-sobre {
+    position: fixed;
+    bottom: 0;
     width: 100%;
+    height: 120px;
+    backdrop-filter: blur(2px);
+    z-index: 9998;
+    transition: height 0.5s ease, transform 1.5s ease;
+    transform: translateY(135px);
+}
+
+.menu-sobre.visivel {
+    transform: translateY(0);
+}
+
+.opcoes {
+    width: 60%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     position: absolute;
-    bottom: -40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 60px), -50%);
 }
 
 .opcoes li {
@@ -544,16 +668,30 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 120px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    height: 120px;
+    flex: 1;
     cursor: pointer;
     transition: all 0.8s ease;
+    position: relative;
 }
 
 .opcoes li:hover {
     color: rgb(42, 217, 223);
+}
+
+.opcoes li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    /* Posicionamento da linha em relação ao li */
+    transform: translateY(-50%);
+    height: 50%;
+    /* Altura da linha */
+    width: 1px;
+    /* Largura da linha */
+    background-color: rgba(224, 224, 224, 0.1);
+    /* Cor da linha */
 }
 
 #portfolio {
@@ -646,9 +784,10 @@ main {
 .servico h1 {
     width: fit-content;
     flex: 0.7;
-    font-size: 25px;
+    font-size: 24px;
     user-select: none;
     font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 .servico.left h1 {
@@ -689,12 +828,13 @@ main {
     right: 15px;
     bottom: 10px;
     font-size: 13px;
+    text-shadow: rgba(0, 0, 0, 0.8) 0.08em 0.08em 0em;
 }
 
 .servico:hover span {
     color: rgb(1, 181, 187);
     font-weight: bold;
-    text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+    text-shadow: rgba(0, 0, 0, 0.8) 0.08em 0.08em 0em;
 }
 
 .popup-servicos {
