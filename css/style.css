@@ -39,7 +39,7 @@ section {
     left: 0;
     overflow: hidden;
     transform: scale(0);
-    transition: filter 0.6s ease;
+    transition: filter 0.6s ease, transform 1.2s ease, opacity 0.5s ease;
 }
 
 button {
@@ -554,7 +554,7 @@ main {
     height: fit-content;
 }
 
-#sobre .texto {
+#sobre .texto, #servico-popup .texto {
     font-size: 22px;
     line-height: 1.6em;
     font-weight: 500;
@@ -840,6 +840,97 @@ main {
 .popup-servicos {
     display: none;
     position: absolute;
+}
+
+#servico-popup .texto {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#servico-popup .title {
+    margin-bottom: 30px;
+}
+
+.accordion-1 {
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    margin-top: 10px;
+}
+
+.accordion-1 li {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 0px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    letter-spacing: 0.02em;
+}
+
+.accordion-1 li p {
+    margin: 0px;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mark {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(1, 181, 187);
+    margin-right: 15px;
+}
+
+.accordion-1 .trabalho {
+    color: rgb(220, 220, 220);
+}
+
+.explicacao {
+    color: rgb(140, 140, 140);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+}
+
+.trabalho.ativo .explicacao {
+    max-height: 600px;
+    animation: fade 1s ease-in-out;
+}
+
+.explicacao p {
+    margin: 10px 0;
+    margin-bottom: 5px;
+}
+
+.trabalho.ativo svg {
+    transform: rotate(180deg);
+}
+
+.accordion-1 svg {
+    margin-top: 10px;
+    fill: rgb(15, 15, 15);
+    transition: transform 1s ease-in;
+}
+
+.accordion-1 {
+    width: 800px;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 #contato h1 {

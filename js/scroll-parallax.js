@@ -3,7 +3,6 @@ const logoBtn = document.getElementById('logo');
 const portfolio = document.getElementById('portfolios');
 const solucoes = document.getElementById('solucoes');
 const scrollIcon = document.getElementById('scroll-ico');
-const ContatoBtn = document.getElementById('contato-submit');
 const menuItems = document.querySelectorAll('.menu li');
 let currentSection = 0;
 let isScrolling = false;
@@ -23,7 +22,7 @@ window.addEventListener('wheel', (event) => {
 
     setTimeout(() => {
         isScrolling = false;
-    }, 700); // Defina o tempo de atraso aqui (1 segundo neste exemplo)
+    }, 1500); // Defina o tempo de atraso aqui (1 segundo neste exemplo)
 });
 
 // Ouvinte de evento de teclado para detectar as teclas de seta para cima e para baixo
@@ -51,12 +50,6 @@ window.addEventListener('keydown', (event) => {
 
 logoBtn.addEventListener('click', function () {
     currentSection = 0;
-    scrollToSection(currentSection);
-    updateNavigationButtons(currentSection);
-});
-
-ContatoBtn.addEventListener('click', function () {
-    currentSection = 4;
     scrollToSection(currentSection);
     updateNavigationButtons(currentSection);
 });
@@ -127,7 +120,9 @@ menuItems.forEach((item, index) => {
 function scrollToSection(index) {
     sections.forEach((section, i) => {
         const scale = i === index ? 1 : 0; // Define a escala de 0 para todas as seções, exceto a atual
+        const opacity = i === index ? 1 : 0;
         section.style.transform = `scale(${scale})`;
+        section.style.opacity = opacity;
     });
 }
 

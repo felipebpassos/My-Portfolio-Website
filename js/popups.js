@@ -29,14 +29,21 @@ $(document).ready(function() {
 
     //Serviços
     $('.servico').click(function() {
+        var servicoSelecionado = $(this).data('id');
+        $('#' + servicoSelecionado).removeClass('hidden');
         $('#servico-popup').removeClass('hidden');
     });
 
     $('#close-servico').click(function() {
         $('#servico-popup').addClass('hidden');
+        $('#sites, #marketing, #softwares').addClass('hidden');
     });
 
     //Contato
+    $('#contato-submit').click(function() {
+        $('#contato-form').removeClass('hidden');
+    });
+
     $('#contato-btn').click(function() {
         $('#contato-form').removeClass('hidden');
     });
