@@ -1,80 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .img {
-            display: inline-block;
-            position: relative;
-        }
-
-        .draw {
-            height: 180px;
-            margin-right: 50px;
-        }
-
-        .animated {
-            position: absolute;
-        }
-
-        #smoke {
-            height: 120px;
-            bottom: 95%;
-            right: 35px;
-        }
-
-        #light {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 0, 0.8);
-            animation: pulse 4s infinite;
-            z-index: -1;
-            top: 25%;
-            right: 80px;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            50% {
-                opacity: 1;
-                /* Aceso */
-            }
-
-            51%,
-            100% {
-                opacity: 0;
-                /* Apagado */
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Exemplo de Selects usando Divs</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .select-container {
+        position: relative;
+        display: inline-block;
+        height: fit-content; /* Largura fixa */
+        width: fit-content; /* Altura fixa */
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    .selected-option {
+        width: 200px;
+        height: 30px;
+        padding: 5px;
+    }
+    .options-container {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        width: 100%;
+        max-height: 150px; /* Altura máxima do dropdown */
+        overflow-y: auto; /* Adiciona barra de rolagem se necessário */
+        display: none;
+    }
+    .option {
+        padding: 5px;
+        cursor: pointer;
+    }
+    .option:hover {
+        background-color: #f0f0f0;
+    }
+</style>
 </head>
+<body>
 
-<body style="background-color: black;">
-    <div class="container">
-        <div class="img">
-            <img class="draw" src="./img/structure_house.png" alt="">
-        </div>
-        <div class="img">
-            <img class="draw" src="./img/house.png" alt="">
-        </div>
-        <div class="img">
-            <img class="draw" src="./img/house.png" alt="">
-            <img class="animated" id="smoke" src="./img/smoke.gif" alt="">
-            <div class="animated" id="light"></div>
-        </div>
+<div class="select-container" id="select1">
+    <div class="selected-option">Selecione uma opção</div>
+    <div class="options-container">
+        <div class="option" data-value="1">Opção 1</div>
+        <div class="option" data-value="2">Opção 2</div>
+        <div class="option" data-value="3">Opção 3</div>
+        <div class="option" data-value="4">Opção 4</div>
     </div>
-</body>
+</div>
 
+<div class="select-container" id="select2">
+    <div class="selected-option">Selecione uma opção</div>
+    <div class="options-container">
+        <div class="option" data-value="1">Opção A</div>
+        <div class="option" data-value="2">Opção B</div>
+        <div class="option" data-value="3">Opção C</div>
+        <div class="option" data-value="4">Opção D</div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('.selected-option').click(function(e){
+        e.stopPropagation();
+        var $optionsContainer = $(this).next('.options-container');
+        $('.options-container').not($optionsContainer).hide(); // Fecha todos os outros selects abertos
+        $optionsContainer.toggle(); // Abre ou fecha o select atual
+    });
+
+    $('.option').click(function(){
+        var value = $(this).data('value');
+        var text = $(this).text();
+        $(this).parent().prev('.selected-option').text(text);
+        $(this).parent().prev('.selected-option').data('value', value);
+        $(this).parent().hide();
+    });
+
+    $(document).click(function(){
+        $('.options-container').hide();
+    });
+});
+</script>
+
+</body>
 </html>

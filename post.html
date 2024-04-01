@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .img {
+            display: inline-block;
+            position: relative;
+        }
+
+        .draw {
+            height: 180px;
+            margin-right: 50px;
+        }
+
+        .animated {
+            position: absolute;
+        }
+
+        #smoke {
+            height: 120px;
+            bottom: 95%;
+            right: 35px;
+        }
+
+        #light {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 0, 0.8);
+            animation: pulse 4s infinite;
+            z-index: -1;
+            top: 25%;
+            right: 80px;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            50% {
+                opacity: 1;
+                /* Aceso */
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+                /* Apagado */
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <div class="container">
+        <div class="img">
+            <img class="draw" src="./img/structure_house.png" alt="">
+        </div>
+        <div class="img">
+            <img class="draw" src="./img/house.png" alt="">
+        </div>
+        <div class="img">
+            <img class="draw" src="./img/house.png" alt="">
+            <img class="animated" id="smoke" src="./img/smoke.gif" alt="">
+            <div class="animated" id="light"></div>
+        </div>
+    </div>
+</body>
+
+</html>
