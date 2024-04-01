@@ -3,6 +3,7 @@ const closeMenu = document.querySelector('.close-menu');
 const menu = document.querySelector('.menu');
 const logo = document.querySelector('.logo');
 const menuLi = menu.querySelector('ul');
+const menuSpans = menu.querySelectorAll('span');
 const navg = document.querySelector('nav');
 const sections = document.querySelectorAll('section'); // Seleciona todas as seções
 const animation = document.querySelector('.animation-container');
@@ -20,6 +21,9 @@ toggleMenuButton.addEventListener('click', () => {
     logo.classList.add('blur');
     navg.classList.add('blur');
     menuLi.classList.add('ativo');
+    menuSpans.forEach(menuSpan => {
+        menuSpan.classList.add('animate');
+    });
 });
 
 closeMenu.addEventListener('click', () => {
@@ -34,4 +38,7 @@ closeMenu.addEventListener('click', () => {
     logo.classList.remove('blur');
     navg.classList.remove('blur');
     menuLi.classList.remove('ativo');
+    menuSpans.forEach(menuSpan => {
+        menuSpan.classList.remove('animate');
+    });
 });

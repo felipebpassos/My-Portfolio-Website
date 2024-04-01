@@ -82,11 +82,11 @@
 
     <div class="menu hidden">
         <ul>
-            <li>Início</li>
-            <li>Sobre</li>
-            <li>Portfolio</li>
-            <li>Serviços</li>
-            <li>Contato</li>
+            <li><span>Início</span></li>
+            <li><span>Sobre</span></li>
+            <li><span>Portfolio</span></li>
+            <li><span>Serviços</span></li>
+            <li><span>Contato</span></li>
         </ul>
     </div>
 
@@ -227,7 +227,7 @@
         <div class="portfolio">
             <div class="portfolio-container">
                 <img src="./img/portfolio1.jpg" alt="">
-                <h1>Plataforma e-learning</h1>
+                <h1>Área de Membros</h1>
             </div>
         </div>
         <div class="portfolio">
@@ -564,7 +564,8 @@
                         </svg>
                     </li>
                     <div class="explicacao">
-                        <p></p>
+                        <p>Desenvolvimento de projetos variados para diferentes modelos de negócios, oferecendo soluções
+                            inovadoras e orientadas para resultados em todos os setores.</p>
                     </div>
                 </div>
                 <div class="trabalho">
@@ -681,7 +682,8 @@
                                 <div class="selected-option">
                                     <span>Qual seu orçamento?</span>
                                     <svg width="12" height="8" viewBox="0 0 42 25">
-                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
+                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
+                                            stroke-linecap="round"></path>
                                     </svg>
                                 </div>
                                 <div class="options-container">
@@ -695,7 +697,15 @@
                     </div>
                     <div class="message-box">
                         <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem"></textarea>
+                        <textarea id="mensagem" name="mensagem" placeholder="Deixe uma mensagem"></textarea>
+                        <script>
+                            const textarea = document.querySelector('textarea');
+                        
+                            textarea.addEventListener('input', () => {
+                                textarea.style.height = 'auto'; // Redefinir a altura para o valor padrão
+                                textarea.style.height = `${textarea.scrollHeight}px`; // Definir a altura do textarea como a altura do texto
+                            });
+                        </script>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: start;">
                         <button type="submit">

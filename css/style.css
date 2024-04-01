@@ -408,16 +408,29 @@ nav p.clicked {
 }
 
 .menu ul li {
+    display: block;
     font-family: 'Manrope', sans-serif;
     color: white;
     font-size: 50px;
     margin-bottom: 15px;
     font-weight: 900;
     cursor: pointer;
+    overflow: hidden;
+    height: fit-content;
 }
 
 .menu ul li:hover {
     color: rgb(42, 217, 223);
+}
+
+.menu ul li span {
+    display: block;
+    transform: translateY(40px);
+    transition: transform 1s ease;
+}
+
+.menu ul li span.animate {
+    transform: translateY(0);
 }
 
 .language-translator {
@@ -1108,7 +1121,7 @@ main {
     margin-bottom: 40px;
 }
 
-.col label {
+.col label, .message-box label {
     color: rgb(42, 217, 223);
     font-size: 12px;
 }
@@ -1485,6 +1498,6 @@ main {
 }
 
 .hidden {
-    display: none;
-    background-color: transparent;
+    opacity: 0;
+    z-index: -1;
 }
