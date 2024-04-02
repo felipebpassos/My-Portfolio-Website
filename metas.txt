@@ -1,17 +1,10 @@
 Abrir e criar popup de portifolio - Portfolio
 Criar carrossel de portfolio - Portfolio
 
-no meu site de profissional de programador web vai ter uma seção mostrando o portfolio, serão em formato de card com um título h1, ao hover aparece um resumo e ao clicar aparece as informações, história, tecnologias e trabalho feito, escala de preço, etc.
-
-Fazer popup de explicação do serviço - Soluções
-
-Fazer popup com formulário de contato - Contato
-
+No meu site de profissional de programador web vai ter uma seção mostrando o portfolio, serão em formato de card com um título h1, ao hover aparece um resumo e ao clicar aparece as informações, história, tecnologias e trabalho feito, escala de preço, etc.
 
 Todas as páginas:
-
 	Responsividade
-	Efeito Paralax
 
 
 

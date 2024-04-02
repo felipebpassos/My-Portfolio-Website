@@ -426,7 +426,7 @@ nav p.clicked {
 .menu ul li span {
     display: block;
     transform: translateY(40px);
-    transition: transform 1s ease;
+    transition: transform 1.2s ease;
 }
 
 .menu ul li span.animate {
@@ -774,6 +774,46 @@ main {
 
 .portfolio:hover h1 {
     transform: translateY(-220px);
+}
+
+.portfolio span {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: rgb(42, 217, 223);
+    color: rgb(15, 15, 15);
+    border-radius: 15px;
+    transition: transform 0.8s ease, opacity 1.5s ease;
+    letter-spacing: 0.02em;
+}
+
+.portfolio:hover span {
+    opacity: 1;
+    transform: translate(-50%, -220px);
+}
+
+.portfolio p {
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.8s ease;
+    text-shadow: rgba(0, 0, 0, 0.5) 0.08em 0.08em 0.08em;
+}
+
+.portfolio:hover p {
+    opacity: 1;
+    transform: translate(-50%, -35px);
 }
 
 .custom-cursor {
@@ -1497,7 +1537,12 @@ main {
     filter: blur(15px);
 }
 
-.hidden {
+.invisible {
     opacity: 0;
     z-index: -1;
+}
+
+.hidden {
+    display: none;
+    background-color: transparent;
 }

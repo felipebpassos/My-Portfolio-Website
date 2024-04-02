@@ -1,7 +1,6 @@
 const toggleMenuButton = document.querySelector('.toggle-menu');
 const closeMenu = document.querySelector('.close-menu');
 const menu = document.querySelector('.menu');
-const logo = document.querySelector('.logo');
 const menuLi = menu.querySelector('ul');
 const menuSpans = menu.querySelectorAll('span');
 const navg = document.querySelector('nav');
@@ -17,8 +16,7 @@ toggleMenuButton.addEventListener('click', () => {
     translation.classList.add('blur');
     toggleMenuButton.classList.add('hidden');
     closeMenu.classList.remove('hidden');
-    menu.classList.remove('hidden');
-    logo.classList.add('blur');
+    menu.classList.remove('invisible');
     navg.classList.add('blur');
     menuLi.classList.add('ativo');
     menuSpans.forEach(menuSpan => {
@@ -34,8 +32,7 @@ closeMenu.addEventListener('click', () => {
     translation.classList.remove('blur');
     toggleMenuButton.classList.remove('hidden');
     closeMenu.classList.add('hidden');
-    menu.classList.add('hidden');
-    logo.classList.remove('blur');
+    menu.classList.add('invisible');
     navg.classList.remove('blur');
     menuLi.classList.remove('ativo');
     menuSpans.forEach(menuSpan => {
