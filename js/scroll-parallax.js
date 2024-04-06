@@ -102,8 +102,7 @@ menuItems.forEach((item, index) => {
         translation.classList.remove('blur');
         toggleMenuButton.classList.remove('hidden');
         closeMenu.classList.add('hidden');
-        menu.classList.add('hidden');
-        logo.classList.remove('blur');
+        menu.classList.add('invisible');
         navg.classList.remove('blur');
         menuLi.classList.remove('ativo');
 

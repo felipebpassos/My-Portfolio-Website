@@ -411,8 +411,8 @@ nav p.clicked {
     display: block;
     font-family: 'Manrope', sans-serif;
     color: white;
-    font-size: 50px;
-    margin-bottom: 15px;
+    font-size: 70px;
+    margin-bottom: 0;
     font-weight: 900;
     cursor: pointer;
     overflow: hidden;
@@ -494,9 +494,9 @@ main {
 
 .apresentacao-principal img {
     position: absolute;
-    bottom: 7vh;
-    right: 40px;
-    height: 90vh;
+    bottom: 12vh;
+    right: 30px;
+    height: 86vh;
     min-height: 400px;
     user-select: none;
     transition: transform 1.5s ease-out;
