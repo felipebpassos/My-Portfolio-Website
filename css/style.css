@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
@@ -495,8 +495,8 @@ main {
 .apresentacao-principal img {
     position: absolute;
     bottom: 12vh;
-    right: 30px;
-    height: 86vh;
+    right: -10px;
+    height: 89vh;
     min-height: 400px;
     user-select: none;
     transition: transform 1.5s ease-out;
@@ -505,11 +505,11 @@ main {
 .apresentacao-principal h1 {
     font-family: 'Manrope', sans-serif;
     color: white;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 1.2em;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 1.26em;
     position: absolute;
-    top: 45%;
+    top: 44%;
     transform: translateY(-50%);
     left: 10%;
     z-index: 998;
@@ -847,23 +847,27 @@ main {
 .servico h1 {
     width: fit-content;
     flex: 0.7;
-    font-size: 24px;
+    font-size: 27px;
     user-select: none;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    line-height: 1.7em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    font-family: 'Roboto', sans-serif;
 }
 
 .servico.left h1 {
     padding-right: 50px;
-    font-size: 30px;
+    font-size: 32px;
+    line-height: 1.2em;
 }
 
 .servico.last h1 {
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .servico.right h1 {
-    padding-left: 60px;
+    padding-left: 40px;
+    font-weight: 700;
 }
 
 .video-servico {

@@ -5,7 +5,7 @@ portfolios.forEach(portfolio => {
   // Crie um elemento para representar o círculo
   const circle = document.createElement('div');
   circle.classList.add('custom-cursor');
-  circle.textContent = 'Clique aqui';
+  circle.textContent = 'Ver Projeto';
   portfolio.appendChild(circle);
 
   // Calcule o deslocamento necessário para centralizar o círculo
