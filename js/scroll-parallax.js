@@ -6,9 +6,11 @@ const scrollIcon = document.getElementById('scroll-ico');
 const menuItems = document.querySelectorAll('.menu li');
 let currentSection = 0;
 let isScrolling = false;
+let startY = 0; // Para armazenar a posição inicial do toque
 
 scrollToSection(currentSection);
 
+// Função para scroll usando o mouse (wheel)
 window.addEventListener('wheel', (event) => {
     if (isScrolling) return;
     isScrolling = true;
@@ -22,32 +24,59 @@ window.addEventListener('wheel', (event) => {
 
     setTimeout(() => {
         isScrolling = false;
-    }, 1500); // Defina o tempo de atraso aqui (1 segundo neste exemplo)
+    }, 1500); // Tempo de atraso (1,5 segundos)
 });
 
-// Ouvinte de evento de teclado para detectar as teclas de seta para cima e para baixo
+// Função para scroll usando as setas do teclado
 window.addEventListener('keydown', (event) => {
     if (isScrolling) return;
     isScrolling = true;
 
     if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
-        // Rolar para baixo ou para a próxima seção
         currentSection = Math.min(currentSection + 1, sections.length - 1);
     } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-        // Rolar para cima ou para a seção anterior
         currentSection = Math.max(currentSection - 1, 0);
     }
 
     scrollToSection(currentSection);
-
-    // Atualize os botões de navegação aqui
     updateNavigationButtons(currentSection);
 
     setTimeout(() => {
         isScrolling = false;
-    }, 400); // Defina o tempo de atraso aqui (700ms neste exemplo)
+    }, 400); // Tempo de atraso (400ms)
 });
 
+// Função para capturar a posição inicial do toque
+window.addEventListener('touchstart', (event) => {
+    startY = event.touches[0].clientY;
+});
+
+// Função para detectar o movimento de deslize (scroll) em dispositivos móveis
+window.addEventListener('touchmove', (event) => {
+    if (isScrolling) return;
+
+    const deltaY = startY - event.touches[0].clientY;
+
+    if (Math.abs(deltaY) > 30) { // Limite para evitar mudanças acidentais de seção
+        isScrolling = true;
+        if (deltaY > 0) {
+            // Rolar para baixo
+            currentSection = Math.min(currentSection + 1, sections.length - 1);
+        } else {
+            // Rolar para cima
+            currentSection = Math.max(currentSection - 1, 0);
+        }
+
+        scrollToSection(currentSection);
+        updateNavigationButtons(currentSection);
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, 400); // Tempo de atraso (1,5 segundos)
+    }
+});
+
+// Funções de navegação por clique
 logoBtn.addEventListener('click', function () {
     currentSection = 0;
     scrollToSection(currentSection);
@@ -66,14 +95,11 @@ solucoes.addEventListener('click', function () {
     updateNavigationButtons(currentSection);
 });
 
-// Adicione um ouvinte de clique a cada item da lista
 navItems.forEach((item) => {
     item.addEventListener('click', () => {
-
         const target = item.getAttribute('data-target');
         const targetSection = document.querySelector(`#${target}`);
 
-        // Encontre o índice da targetSection
         let targetIndex = -1;
         sections.forEach((section, i) => {
             if (section === targetSection) {
@@ -83,16 +109,12 @@ navItems.forEach((item) => {
         });
 
         scrollToSection(currentSection); // Rolar para a seção correspondente
-
-        // Atualize os botões de navegação aqui
         updateNavigationButtons(currentSection);
     });
 });
 
-// Adicione um ouvinte de clique a cada item do menu
 menuItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-        // Atualize o índice da seção atual para corresponder ao índice do item clicado no menu
         currentSection = index;
 
         sections.forEach(section => {
@@ -106,16 +128,12 @@ menuItems.forEach((item, index) => {
         navg.classList.remove('blur');
         menuLi.classList.remove('ativo');
 
-        // Rolar para a seção correspondente
         scrollToSection(currentSection);
-
-        // Atualize os botões de navegação aqui
         updateNavigationButtons(currentSection);
     });
 });
 
-//FUNÇÔES
-
+// Função para rolar até a seção desejada
 function scrollToSection(index) {
     sections.forEach((section, i) => {
         const scale = i === index ? 1 : 0; // Define a escala de 0 para todas as seções, exceto a atual
@@ -125,14 +143,13 @@ function scrollToSection(index) {
     });
 }
 
+// Função para atualizar os botões de navegação
 function updateNavigationButtons(currentIndex) {
-    // Remova a classe "clicked" de todos os botões de navegação
     navItems.forEach(navItem => {
         navItem.querySelector('li').classList.remove('clicked');
         const paragraph = navItem.querySelector('p');
         paragraph.classList.remove('clicked');
 
-        // Verifique se currentIndex é igual a 2 para ocultar o parágrafo
         if (currentIndex === 2) {
             paragraph.style.display = 'none';
         } else {
@@ -140,10 +157,7 @@ function updateNavigationButtons(currentIndex) {
         }
     });
 
-    // Adicione a classe "clicked" ao botão de navegação correspondente à seção atual
     const currentNavItem = navItems[currentIndex];
     currentNavItem.querySelector('li').classList.add('clicked');
     currentNavItem.querySelector('p').classList.add('clicked');
 }
-
-

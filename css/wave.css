@@ -4,7 +4,7 @@
     width: 100%;
     text-align: center;
     background-color: rgb(33, 156, 160);
-    height: 75vh;
+    height: 75dvh;
     z-index: -1;
     overflow: hidden;
 }
@@ -12,7 +12,7 @@
 .waves {
     position: relative;
     width: 100%;
-    height: 15vh;
+    height: 15dvh;
     margin-top: 115px;
     margin-bottom: -7px;
     /*Fix for safari gap*/
@@ -63,5 +63,15 @@
     .waves {
         height: 40px;
         min-height: 40px;
+    }
+}
+
+@media(max-width: 450px) {
+    .fluid {
+        height: 82dvh;
+    }
+
+    .bottom {
+        height: 700px;
     }
 }

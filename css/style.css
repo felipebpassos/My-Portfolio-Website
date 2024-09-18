@@ -11,11 +11,11 @@
 body {
     color: white;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     max-width: 100vw;
-    max-height: 100vh;
+    max-height: 100dvh;
     display: flex;
-    position: relative;
+    position: absolute;
     background-color: rgb(15, 15, 15);
     font-family: 'Orbitron', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -26,6 +26,14 @@ body {
         "cv01", "cv02", "cv03", "cv04",
         "cv05", "cv06", "cv09", "cv10";
     overflow: hidden;
+}
+
+.responsivo {
+    display: none;
+}
+
+.wide {
+    display: block;
 }
 
 .fade-in-element {
@@ -40,8 +48,9 @@ body {
 }
 
 section {
-    height: 100vh;
-    max-height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    max-height: 100%;
     max-width: 100%;
     width: 100%;
     display: flex;
@@ -64,7 +73,7 @@ a {
 
 #fundo-loader {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: rgb(15, 15, 15);
     position: fixed;
     top: 0;
@@ -72,9 +81,8 @@ a {
 }
 
 #loader {
-    height: 50px;
-    width: 220px;
-    background: rgb(15, 15, 15) url("http://localhost/simplifyweb.com.br/img/simplifyweb.png") center/cover no-repeat;
+    height: 80px;
+    width: 320px;
     position: fixed;
     top: 40%;
     left: 50%;
@@ -398,7 +406,7 @@ nav p.clicked {
     position: absolute;
     z-index: 9997;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: background-color 2s ease;
 }
 
@@ -462,9 +470,9 @@ main {
 }
 
 .section-box {
-    margin-top: 9vh;
-    margin-bottom: 15vh;
-    height: 76vh;
+    margin-top: 9dvh;
+    margin-bottom: 15dvh;
+    height: 76dvh;
     width: 60%;
     transform: translateX(60px);
 }
@@ -478,8 +486,8 @@ main {
 }
 
 .apresentacao-principal {
-    margin-top: 25vh;
-    height: 75vh;
+    margin-top: 25dvh;
+    height: 75dvh;
     width: 75%;
     user-select: none;
 }
@@ -494,9 +502,9 @@ main {
 
 .apresentacao-principal img {
     position: absolute;
-    bottom: 12vh;
+    bottom: 11dvh;
     right: -10px;
-    height: 89vh;
+    height: 88dvh;
     min-height: 400px;
     user-select: none;
     transition: transform 1.5s ease-out;
@@ -505,14 +513,26 @@ main {
 .apresentacao-principal h1 {
     font-family: 'Manrope', sans-serif;
     color: white;
-    font-weight: 800;
-    font-size: 58px;
+    font-weight: 900;
+    font-size: 78px;
     line-height: 1.26em;
     position: absolute;
-    top: 44%;
+    top: 42%;
     transform: translateY(-50%);
     left: 10%;
     z-index: 998;
+}
+
+/* Efeito de cursor piscando */
+.blinking-cursor {
+    font-weight: 400;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .contato-submit-box {
@@ -577,7 +597,8 @@ main {
     height: fit-content;
 }
 
-#sobre .texto, #servico-popup .texto {
+#sobre .texto,
+#servico-popup .texto {
     font-size: 22px;
     line-height: 1.6em;
     font-weight: 500;
@@ -615,11 +636,11 @@ main {
     filter: saturate(220%);
 }
 
-#ultimate img {
+#m4digital img {
     height: 90px !important;
 }
 
-#vip img {
+#recz img {
     height: 50px !important;
 }
 
@@ -672,6 +693,13 @@ main {
     transform: translateY(0);
 }
 
+.menu-sobre div {
+    position: relative;
+    height: 100%;
+    margin-left: 60px;
+    margin-right: 30px;
+}
+
 .opcoes {
     width: 60%;
     margin: auto;
@@ -718,9 +746,10 @@ main {
 }
 
 #portfolio {
-    height: calc(100vh - 20px);
+    height: calc(100dvh - 20px);
     width: calc(100% - 10px);
     padding: 10px;
+    padding-bottom: 0;
     padding-right: 0;
     overflow: hidden;
 }
@@ -730,6 +759,7 @@ main {
     height: 100%;
     background-color: rgb(40, 40, 40);
     margin-right: 10px;
+    margin-bottom: 10px;
     position: relative;
 }
 
@@ -755,7 +785,7 @@ main {
 }
 
 .portfolio:hover img {
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(0.4);
 }
 
 .portfolio h1 {
@@ -779,22 +809,21 @@ main {
 .portfolio span {
     position: absolute;
     left: 50%;
-    bottom: 25px;
+    bottom: 40px;
     transform: translate(-50%, 0);
-    opacity: 0;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     padding: 5px 10px;
-    background-color: rgb(42, 217, 223);
-    color: rgb(15, 15, 15);
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     transition: transform 0.8s ease, opacity 1.5s ease;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.3em;
+    white-space: nowrap;
 }
 
 .portfolio:hover span {
-    opacity: 1;
     transform: translate(-50%, -220px);
 }
 
@@ -837,7 +866,7 @@ main {
 }
 
 .servico {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     position: relative;
     display: flex;
     align-items: center;
@@ -887,7 +916,7 @@ main {
 }
 
 .servico:hover video {
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(0.6);
 }
 
 .video-servico span {
@@ -1002,10 +1031,10 @@ main {
 
 #contato h1 {
     position: absolute;
-    top: 10vh;
+    top: 10dvh;
     left: 0;
     font-family: 'Hind', sans-serif;
-    font-size: 8vh;
+    font-size: 8dvh;
 }
 
 #contato h3 {
@@ -1061,6 +1090,7 @@ main {
     font-family: 'Hind', sans-serif;
     background-color: rgb(42, 217, 223);
     font-size: 17px;
+    color: #000;
 }
 
 .contato-btn:hover {
@@ -1095,7 +1125,9 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    overflow: auto;
     z-index: 9997;
     background-color: rgb(15, 15, 15);
     padding-top: 40px;
@@ -1113,6 +1145,7 @@ main {
 
 .formulario {
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1165,7 +1198,8 @@ main {
     margin-bottom: 40px;
 }
 
-.col label, .message-box label {
+.col label,
+.message-box label {
     color: rgb(42, 217, 223);
     font-size: 12px;
 }
@@ -1216,11 +1250,11 @@ main {
 }
 
 .selected-option:hover {
-    background-color: rgb(25,25,25);
+    background-color: rgb(25, 25, 25);
 }
 
 .selected-option.opened {
-    background-color: rgb(25,25,25);
+    background-color: rgb(25, 25, 25);
 }
 
 .selected-option svg {
@@ -1246,8 +1280,9 @@ main {
 .option {
     padding: 5px 10px;
 }
+
 .option:hover {
-    background-color: rgb(25,25,25);
+    background-color: rgb(25, 25, 25);
 }
 
 .whatsapp-button {
@@ -1322,7 +1357,7 @@ main {
 
     .toggle-menu,
     .close-menu,
-    .language-translator {
+    .language-translator, .close-popup {
         right: 30px;
     }
 
@@ -1349,7 +1384,7 @@ main {
 
     .toggle-menu,
     .close-menu,
-    .language-translator {
+    .language-translator, .close-popup {
         right: 30px;
     }
 
@@ -1381,7 +1416,7 @@ main {
     }
 }
 
-@media(min-height: 750px) {
+@media(min-width: 1000px) and (min-height: 750px) {
     nav {
         top: 200px;
     }
@@ -1389,15 +1424,115 @@ main {
     .animation-container {
         top: 540px;
     }
-}
 
-@media(min-height: 900px) {
-    nav {
-        top: 250px;
+    .apresentacao-principal h1 {
+        font-size: 60px;
+        left: 8%;
     }
 
-    .animation-container {
-        top: 690px;
+    .apresentacao-principal img {
+        right: -150px;
+    }
+
+    .contato-submit-box {
+        left: 8%;
+    }
+
+    .contato-submit {
+        font-size: 18px;
+    }
+
+    .servico.left h1 {
+        font-size: 28px;
+    }
+
+    .servico h1 {
+        font-size: 23px;
+    }
+
+    .section-box {
+        margin-top: 12dvh;
+    }
+
+    .section-box.contato {
+        height: 65dvh;
+    }
+
+    #contato h1 {
+        top: 8dvh;
+        font-size: 45px;
+    }
+
+    .foto-box {
+        right: 30px;
+    }
+}
+
+@media(min-width: 1000px) and (min-height: 900px) {
+    nav {
+        top: 250px;
+        left: 50px;
+    }
+
+    nav p {
+        font-size: 16px;
+    }
+
+    .toggle-menu svg {
+        width: 45px;
+        height: 20px;
+    }
+
+    .language-translator img {
+        height: 36px;
+    }
+
+    .cargo {
+        margin-left: 8%;
+        margin-top: 60px;
+        font-size: 18px;
+    }
+
+    .apresentacao-principal h1 {
+        font-size: 80px;
+        top: 44%;
+        left: 8%;
+    }
+
+    .apresentacao-principal img {
+        right: -200px;
+    }
+
+    .contato-submit-box {
+        left: 8%;
+    }
+
+    .contato-submit {
+        font-size: 20px;
+    }
+
+    .descricao {
+        width: 60%;
+        height: fit-content;
+        padding: 50px 60px;
+    }
+
+    .descricao p {
+        font-size: 18px;
+    }
+
+    .section-box {
+        margin-top: 18dvh;
+        margin-bottom: 15dvh;
+    }
+
+    .section-box.contato {
+        height: 50dvh;
+    }
+
+    #contato h1 {
+        top: 5dvh;
+        font-size: 50px;
     }
 }
 
@@ -1414,7 +1549,7 @@ main {
 
     .logo,
     .toggle-menu,
-    .close-menu {
+    .close-menu, .close-popup {
         top: 20px;
     }
 
@@ -1450,7 +1585,7 @@ main {
     }
 
     .contato-submit {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
@@ -1504,8 +1639,8 @@ main {
     }
 
     .apresentacao-principal {
-        margin-top: 28vh;
-        height: 72vh;
+        margin-top: 28dvh;
+        height: 72dvh;
     }
 
     .cargo {
@@ -1530,6 +1665,243 @@ main {
 
     .descricao p {
         font-size: 7px;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .toggle-menu,
+    .close-menu, .close-popup {
+        right: 10px;
+        top: 10px;
+    }
+
+    .menu ul li {
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        left: 20px;
+        top: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .whatsapp-button {
+        display: none;
+    }
+
+    .language-translator img {
+        display: none;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    .apresentacao-principal {
+        margin-top: 18dvh;
+        height: 82dvh;
+        width: 100%;
+    }
+
+    .cargo {
+        margin-left: 7%;
+        font-size: 12px;
+    }
+
+    .apresentacao-principal h1 {
+        font-size: 45px;
+        top: 28%;
+        left: 7%;
+    }
+
+    .apresentacao-principal img {
+        height: 60dvh;
+        right: -85px;
+        bottom: 16%;
+    }
+
+    .descricao {
+        right: 0px;
+        width: 40%;
+        height: fit-content;
+        padding: 20px 30px;
+    }
+
+    .descricao p {
+        font-size: 13px;
+    }
+
+    .contato-submit-box {
+        left: 7%;
+        font-size: 15px;
+    }
+
+    .section-box {
+        margin-top: 15dvh;
+        margin-bottom: 15dvh;
+        height: 70dvh;
+        width: 85%;
+        transform: translateX(0);
+    }
+
+    #sobre .texto,
+    #servico-popup .texto {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    #sobre .parceiros ul li img {
+        height: 50px;
+    }
+
+    #palazzo img {
+        height: 70px !important;
+    }
+
+    #m4digital img {
+        height: 60px !important;
+    }
+
+    #recz img {
+        height: 30px !important;
+    }
+
+    .saiba-mais-box {
+        position: fixed;
+        bottom: 8dvh;
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+
+    .saiba-mais {
+        width: 60%;
+        transform: translateX(0);
+    }
+
+    .menu-sobre div {
+        margin: auto;
+    }
+
+    .opcoes {
+        width: 80%;
+        transform: translate(-50%, -50%);
+    }    
+
+    #portfolio {
+        display: block;
+    }
+
+    .portfolio {
+        height: calc((100dvh - 30px)/2);
+    }
+
+    .portfolio h1 {
+        font-size: 35px;
+    }
+    
+    .portfolio span {
+        font-size: 12px;
+    }
+
+    .servico {
+        margin-bottom: 40px;
+        display: block;
+        width: 100%;
+    }
+
+    .servico h1 {
+        font-size: 24px;
+    }
+
+    .servico.left h1 {
+        padding-right: 0;
+        font-size: 25px;
+    }
+
+    .servico.right h1 {
+        padding-left: 0;
+    }
+
+    .servico.last h1 {
+        font-size: 24px;
+    }
+
+    .responsivo {
+        display: block;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    .section-box.contato {
+        width: 85%;
+        margin-bottom: 0;
+    }
+
+    #contato h1 {
+        font-size: 5dvh;
+        top: 6dvh;
+    }
+
+    #contato h3 {
+        bottom: 220px;
+    }
+
+    #contato hr {
+        bottom: 130px;
+    }
+
+    .foto-box {
+        bottom: 130px;
+        right: 30px;
+        height: 160px;
+        width: 160px;
+    }
+
+    .contatos {
+        bottom: -40px;
+        justify-content: space-between;
+    }
+
+    .contato-btn {
+        transform: scale(0.8) translateX(-10px);
+    }
+
+    .redes-sociais {
+        margin-left: 40px;
+    }
+
+    .redes-sociais li {
+        margin-right: 25px;
+    }
+
+    .formulario h3 {
+        font-size: 18px;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .popup {
+        padding-top: 70px;
+    }
+}
+
+@media(max-width: 375px) {
+
+    .apresentacao-principal h1 {
+        font-size: 40px;
+    }
+
+    .apresentacao-principal img {
+        right: -65px;
     }
 }
 

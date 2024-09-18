@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Simplify Web</title>
     <link rel="icon" href="./img/logo1.ico">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -21,7 +21,7 @@
     <div id="fundo-loader">
         <div id="loader"></div>
         <div
-            style="width: 220px; position: fixed; top:70%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+            style="width: 220px; position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
             <div class="loading-animation">
                 <div class="ball ball1"></div>
                 <div class="ball ball2"></div>
@@ -145,15 +145,16 @@
 
                 </div>
 
-                <p class="cargo">Felipe Passos | Desenvolvedor Full Stack</p>
+                <p class="cargo">Desenvolvedor Web e Mobile</p>
                 <img src="./img/felipe_passos.png" alt="">
-                <h1>Soluções que<br>Potencializarão<br>Seu Negócio</h1>
+                <h1>Soluções<br><span id="dynamic-text" class="typed-text"></span><span class="blinking-cursor">|</span>
+                </h1>
                 <div class="contato-submit-box">
                     <button id="contato-submit" class="contato-submit">Fale Conosco</button>
                 </div>
                 <div class="descricao">
-                    <p>Desenvolvedor web e mobile criativo, especialista na elaboração desde Landing Pages de alto padrão, até
-                        Softwares
+                    <p>Desenvolvedor criativo, especialista na elaboração de Sites e Landing Pages de alto padrão, até
+                        softwares
                         completos e sob medida.</p>
                 </div>
             </div>
@@ -172,22 +173,22 @@
 
                 <div class="section-content">
                     <p class="texto">Com ampla experiência em projetos diversos, desde sites personalizados até o
-                        desenvolvimento completo de softwares
-                        e sistemas Web robustos, nossa missão é impulsionar sua empresa a
-                        conquistar grandes resultados no crescente e amplo mercado digital.</p>
+                        desenvolvimento completo de aplicações Web e mobile, nossa missão é impulsionar seu negócio ou
+                        sua ideia a
+                        conquistar grandes resultados no mercado digital.</p>
                     <div class="parceiros">
                         <ul>
                             <li id="palazzo">
                                 <img src="./img/palazzo.png" alt="Clínica Palazzo">
                             </li>
-                            <li id="ultimate">
-                                <img src="./img/ultimate-logo.png" alt="Ultimate Members">
+                            <li id="m4digital">
+                                <img src="./img/m4digital.png" alt="M4Digital">
                             </li>
                             <li>
                                 <img src="./img/pomar.png" alt="Pomar Polpa de Frutas">
                             </li>
-                            <li id="vip">
-                                <img src="./img/vip.png" alt="VIP Informática">
+                            <li id="recz">
+                                <img src="./img/recz.png" alt="Recz Films">
                             </li>
                         </ul>
                     </div>
@@ -210,7 +211,7 @@
         </div>
 
         <div class="menu-sobre">
-            <div style="position: relative; height: 100%; margin-left: 60px; margin-right: 30px;">
+            <div>
                 <ul class="opcoes">
                     <li id="sobre-mim" style="display: none;">Sobre Mim</li>
                     <li id="habilidades" style="display: none;">Habilidades</li>
@@ -227,20 +228,21 @@
         <div class="portfolio">
             <div class="portfolio-container">
                 <img src="./img/portfolio1.png" alt="">
-                <h1>Área de Membros</h1>
-                <span>Aplicação Web</span>
-                <p>Plataforma multi-inquilino que cria um ambiente virtual privado com
-                    diversas funcionalidades onde produtores de conteúdo podem hospedar seus cursos.
+                <h1>Sistemas e Apps</h1>
+                <span>SOFTWARES</span>
+                <p>
+                    Soluções personalizadas incluindo sistemas web, aplicativos móveis e
+                    automação de processos, com foco em usabilidade e eficiência.
                 </p>
             </div>
         </div>
         <div class="portfolio">
             <div class="portfolio-container">
                 <img src="./img/portfolio2.png" alt="">
-                <h1>Página de vendas</h1>
-                <span>Landing Page</span>
-                <p>Vitrine digital moderna, de rápido carregamento, capaz de prender a atenção do cliente 
-                    e passar credibilidade ao produto ou serviço.</p>
+                <h1>Sites Profissionais</h1>
+                <span>SITES E LANDING PAGES</span>
+                <p>Vitrine digita moderna, de rápido carregamento, que prende a atenção do cliente
+                    e passa credibilidade ao seu produto ou serviço.</p>
             </div>
         </div>
 
@@ -252,37 +254,28 @@
 
             <div class="section-content">
                 <div class="servico left" data-id="sites">
-                    <h1 style="margin-bottom: 15px;">Websites e Landing Pages</h1>
+                    <h1 style="margin-bottom: 15px;">Sites e Landing Pages</h1>
                     <div class="video-servico">
-                        <video autoplay muted loop width="100%">
-                            <source src="./videos/designer.mp4" type="video/mp4">
+                        <video class="lazy-video" muted autoplay playsinline loop width="100%">
+                            <source data-src="./videos/designer.mp4" type="video/mp4">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                         <span style="text-shadow: rgba(0, 0, 0, 0.8) -0.08em 0.08em 0em;">Ver sobre</span>
                     </div>
                 </div>
 
-                <div class="servico right" data-id="marketing">
+                <div class="servico right" data-id="softwares">
+                    <h1 class="responsivo" style="margin-bottom: 15px;">Desenvolvimento de software</h1>
                     <div class="video-servico">
-                        <video autoplay muted loop width="100%">
-                            <source src="./videos/management.mp4" type="video/mp4">
+                        <video class="lazy-video" muted autoplay playsinline loop width="100%">
+                            <source data-src="./videos/typing.mp4" type="video/mp4">
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                         <span>Ver sobre</span>
                     </div>
-                    <h1 style="margin-bottom: 15px;">Consultoria Digital<br>e Marketing</h1>
+                    <h1 class="wide">Desenvolvimento de software</h1>
                 </div>
 
-                <div class="servico left last" data-id="softwares">
-                    <h1 style="margin-bottom: 15px;">Aplicações Web e Mobile</h1>
-                    <div class="video-servico">
-                        <video autoplay muted loop width="100%">
-                            <source src="./videos/typing.mp4" type="video/mp4">
-                            Seu navegador não suporta o elemento de vídeo.
-                        </video>
-                        <span>Ver sobre</span>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -311,11 +304,11 @@
                     <ul class="redes-sociais">
                         <li><a href="https://www.instagram.com/simplifyweb/" target="_blank"><button><i
                                         class="fa-brands fa-instagram"></i></button></a></li>
-                        <li><a href="" target="_blank"><button><i class="fa-brands fa-github"></i></button></a></li>
-                        <li><a href="" target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                        <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
+                                        class="fa-brands fa-github"></i></button></a></li>
+                        <li><a href="https://www.linkedin.com/in/felipe-b-passos-70a075138/?originalSubdomain=br"
+                                target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
                         </li>
-                        <li><a href="https://dribbble.com/simplifyweb" target="_blank"><button><i
-                                        class="fa-brands fa-dribbble"></i></button></a></li>
                     </ul>
                 </div>
 
@@ -484,79 +477,9 @@
 
         </div>
 
-        <div id="marketing" class="hidden" style=" width: fit-content; margin: 0 auto;">
-
-            <h2 class="title">Consultoria Digital e Marketing</h2>
-
-            <p class="texto" style="width: 800px;"></p>
-
-            <ul class="accordion-1 fade-in-element">
-                <div class="trabalho">
-                    <li>
-                        <p><span class="mark"></span>Pesquisa de mercado e posicionamento de marca</p>
-                        <svg width="18" height="12" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
-                        </svg>
-                    </li>
-                    <div class="explicacao">
-                        <p>Compreender o mercado-alvo, analisar concorrentes e identificar oportunidades estratégicas
-                            para posicionar a marca de forma relevante e diferenciada.</p>
-                    </div>
-                </div>
-                <div class="trabalho">
-                    <li>
-                        <p><span class="mark"></span>Estruturação e estratégias para uma boa Presença Digital</p>
-                        <svg width="18" height="12" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
-                        </svg>
-                    </li>
-                    <div class="explicacao">
-                        <p>Desenvolvimento de estratégias de marketing sob medida para o modelo e realidade do seu
-                            negócio.</p>
-                    </div>
-                </div>
-                <div class="trabalho">
-                    <li>
-                        <p><span class="mark"></span>Gestão de Redes Sociais</p>
-                        <svg width="18" height="12" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
-                        </svg>
-                    </li>
-                    <div class="explicacao">
-                        <p>Construção e manutenção de uma presença forte e engajada nas redes sociais</p>
-                    </div>
-                </div>
-                <div class="trabalho">
-                    <li>
-                        <p><span class="mark"></span>Produção de criativos para anúncios</p>
-                        <svg width="18" height="12" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
-                        </svg>
-                    </li>
-                    <div class="explicacao">
-                        <p>Criação de vídeos impactantes e persuasivos para anúncios nas redes sociais para promover sua
-                            marca ou produto.</p>
-                    </div>
-                </div>
-                <div class="trabalho">
-                    <li>
-                        <p><span class="mark"></span>Campanhas e Gestão de Anúncios ADS</p>
-                        <svg width="18" height="12" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
-                        </svg>
-                    </li>
-                    <div class="explicacao">
-                        <p>Com a gestão de seus anúncios online, alcançamos seu público-alvo de maneira direcionada e
-                            eficiente.</p>
-                    </div>
-                </div>
-            </ul>
-
-        </div>
-
         <div id="softwares" class="hidden" style="width: fit-content; margin: 0 auto;">
 
-            <h2 class="title">Aplicações Web e Mobile</h2>
+            <h2 class="title">Desenvolvimento de softwares</h2>
 
             <p class="texto" style="width: 800px;">Nossos softwares são projetados e desenvolvidos para atender às
                 necessidades específicas de cada negócio, oferecendo soluções eficientes, personalizadas e com
@@ -707,7 +630,7 @@
                         <textarea id="mensagem" name="mensagem" placeholder="Deixe uma mensagem"></textarea>
                         <script>
                             const textarea = document.querySelector('textarea');
-                        
+
                             textarea.addEventListener('input', () => {
                                 textarea.style.height = 'auto'; // Redefinir a altura para o valor padrão
                                 textarea.style.height = `${textarea.scrollHeight}px`; // Definir a altura do textarea como a altura do texto
@@ -742,6 +665,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script src="./js/loading.js"></script>
+    <script src="./js/typing-text.js"></script>
     <script src="./js/saiba-mais.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-parallax.js"></script>
