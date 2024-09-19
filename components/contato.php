@@ -5,8 +5,8 @@ require 'vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
-// Carrega as variáveis do arquivo .env
-$dotenv = Dotenv::createImmutable(__DIR__);
+// Carrega as variáveis do arquivo .env que está na pasta anterior
+$dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
 ?>

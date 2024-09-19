@@ -1,54 +1,70 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     //Sobre Mim
-    $('#sobre-mim').click(function() {
+    $('#sobre-mim').click(function () {
         $('#sobre-mim-popup').removeClass('hidden');
     });
 
-    $('#close-sobre-mim').click(function() {
+    $('#close-sobre-mim').click(function () {
         $('#sobre-mim-popup').addClass('hidden');
     });
 
     //Habilidades
-    $('#habilidades').click(function() {
+    $('#habilidades').click(function () {
         $('#habilidades-popup').removeClass('hidden');
     });
 
-    $('#close-habilidades').click(function() {
+    $('#close-habilidades').click(function () {
         $('#habilidades-popup').addClass('hidden');
     });
 
-    //Portfolio
-    $('.portfolio').click(function() {
-        $('#portfolio-popup').removeClass('hidden');
-    });
+    //Portfolios
 
-    $('#close-portfolio').click(function() {
+    // Detecta se o dispositivo é touch
+    var isTouchDevice = ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
+    // Para dispositivos não touch (mouse)
+    if (!isTouchDevice) {
+        $('.portfolio').click(function () {
+            $('#portfolio-popup').removeClass('hidden');
+        });
+
+        $('.ver-cases').addClass('hidden');
+    }
+
+    // Para dispositivos touch
+    if (isTouchDevice) {
+        $('.ver-cases').click(function () {
+            $('#portfolio-popup').removeClass('hidden');
+        });
+    }
+
+    $('#close-portfolio').click(function () {
         $('#portfolio-popup').addClass('hidden');
     });
 
     //Serviços
-    $('.servico').click(function() {
+    $('.servico').click(function () {
         var servicoSelecionado = $(this).data('id');
         $('#' + servicoSelecionado).removeClass('hidden');
         $('#servico-popup').removeClass('hidden');
     });
 
-    $('#close-servico').click(function() {
+    $('#close-servico').click(function () {
         $('#servico-popup').addClass('hidden');
         $('#sites, #marketing, #softwares').addClass('hidden');
     });
 
     //Contato
-    $('#contato-submit').click(function() {
+    $('#contato-submit').click(function () {
         $('#contato-form').removeClass('hidden');
     });
 
-    $('#contato-btn').click(function() {
+    $('#contato-btn').click(function () {
         $('#contato-form').removeClass('hidden');
     });
 
-    $('#close-contato').click(function() {
+    $('#close-contato').click(function () {
         $('#contato-form').addClass('hidden');
     });
 });

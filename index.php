@@ -267,6 +267,7 @@
                 <img src="./img/portfolio1.png" alt="">
                 <h1>Sistemas e Apps</h1>
                 <span>SOFTWARES</span>
+                <span class="ver-cases">Ver Cases</span>
                 <p>
                     Soluções personalizadas incluindo sistemas web, aplicativos móveis e
                     automação de processos, com foco em usabilidade e eficiência.
@@ -278,6 +279,7 @@
                 <img src="./img/portfolio2.png" alt="">
                 <h1>Sites Profissionais</h1>
                 <span>SITES E LANDING PAGES</span>
+                <span class="ver-cases">Ver Cases</span>
                 <p>Vitrine digita moderna, de rápido carregamento, que prende a atenção do cliente
                     e passa credibilidade ao seu produto ou serviço.</p>
             </div>

@@ -8,6 +8,18 @@
     padding: 0;
 }
 
+html {
+    /* Esconder a barra de rolagem no body em navegadores WebKit (Chrome, Safari) */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Para Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /* Esconde a barra de rolagem no Chrome, Safari */
+}
+
 body {
     color: white;
     width: 100vw;
@@ -26,6 +38,16 @@ body {
         "cv01", "cv02", "cv03", "cv04",
         "cv05", "cv06", "cv09", "cv10";
     overflow: hidden;
+
+    /* Esconder a barra de rolagem no body em navegadores WebKit (Chrome, Safari) */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Para Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Esconde a barra de rolagem no Chrome, Safari */
 }
 
 .responsivo {
@@ -514,7 +536,7 @@ main {
     font-family: 'Manrope', sans-serif;
     color: white;
     font-weight: 900;
-    font-size: 78px;
+    font-size: 74px;
     line-height: 1.2em;
     position: absolute;
     top: 42%;
@@ -825,7 +847,6 @@ main {
     padding: 5px 10px;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
     transition: transform 0.8s ease, opacity 1.5s ease;
     letter-spacing: 0.3em;
     white-space: nowrap;
@@ -833,6 +854,26 @@ main {
 
 .portfolio:hover span {
     transform: translate(-50%, -220px);
+}
+
+.portfolio .ver-cases {
+    opacity: 0;
+    bottom: unset;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    padding: 0px 10px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    transition: transform 0.8s ease, opacity 1.5s ease;
+}
+
+.portfolio:hover .ver-cases {
+    opacity: 1;
+    transform: translate(-50%, -50%);
 }
 
 .portfolio p {
@@ -1139,6 +1180,16 @@ main {
     z-index: 9997;
     background-color: rgb(15, 15, 15);
     padding-top: 40px;
+
+    /* Esconder a barra de rolagem em navegadores WebKit (Chrome, Safari) */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Para Firefox */
+}
+
+.popup::-webkit-scrollbar {
+    display: none;
+    /* Esconder barra de rolagem no Chrome, Safari */
 }
 
 .close-popup {
@@ -1730,8 +1781,9 @@ main {
     }
 
     .logo {
-        left: 20px;
+        left: 7%;
         top: 10px;
+        padding-left: 0;
     }
 
     nav {
@@ -1863,6 +1915,14 @@ main {
 
     .portfolio span {
         font-size: 12px;
+    }
+
+    .portfolio:hover h1 {
+        transform: translateY(-180px);
+    }
+    
+    .portfolio:hover span {
+        transform: translate(-50%, -180px);
     }
 
     .servico {
