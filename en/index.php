@@ -680,7 +680,7 @@
                             </svg>
                             Send message
                         </button>
-                        <div class="g-recaptcha" data-sitekey="6LdstYYpAAAAABI2ljAiFx1xMEP-E0dcIZYdzVJI"
+                        <div class="g-recaptcha" data-sitekey=""
                             style="margin-left: 15px; margin-bottom: 30px;" data-theme="dark"></div>
                     </div>
                 </form>

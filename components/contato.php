@@ -1,3 +1,16 @@
+<?php 
+
+// Carrega o autoload do Composer para carregar as classes do PHPMailer e Dotenv
+require 'vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+// Carrega as variáveis do arquivo .env
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+?>
+
 <!-- Formulário para contato -->
 <div class="popup hidden" id="contato-form">
 
@@ -95,7 +108,7 @@
                         </svg>
                         Enviar mensagem
                     </button>
-                    <div class="g-recaptcha" data-sitekey="6LdstYYpAAAAABI2ljAiFx1xMEP-E0dcIZYdzVJI"
+                    <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_PUBLIC_KEY']?>"
                         style="margin-left: 15px; margin-bottom: 30px;" data-theme="dark"></div>
                 </div>
             </form>

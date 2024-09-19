@@ -1763,12 +1763,12 @@ main {
 
     .apresentacao-principal h1 {
         font-size: 42px;
-        top: 28%;
+        top: 26%;
         left: 7%;
     }
 
     .typed-text {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .apresentacao-principal img {
@@ -1979,7 +1979,7 @@ main {
 @media(max-width: 375px) {
 
     .apresentacao-principal h1 {
-        font-size: 38px;
+        font-size: 36px;
     }
 
     .typed-text {

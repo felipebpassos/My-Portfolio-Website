@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const words = ["Digitais", "Escaláveis", "Eficientes"];
+    const words = ["Digitais", "eficientes", "escaláveis", "sob medida"];
     let wordIndex = 0;
     let charIndex = 0;
     const typingDelay = 150;
