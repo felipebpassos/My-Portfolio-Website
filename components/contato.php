@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // Carrega o autoload do Composer para carregar as classes do PHPMailer e Dotenv
 require 'vendor/autoload.php';
@@ -32,7 +32,7 @@ $dotenv->load();
 
     <div class="formulario">
         <div class="row">
-            <form method="POST" action="../envia-email.php">
+            <form id="formulario-contato" method="POST" action="../envia-email.php">
                 <h5 class="section-title" style="padding: 0 15px; margin-bottom: 20px;">Contato</h5>
                 <h3>Tem algum projeto em mente? Entre em contato conosco para transformá-lo em realidade.
                     Grande ou
@@ -59,12 +59,13 @@ $dotenv->load();
                                 </svg>
                             </div>
                             <div class="options-container">
-                                <div class="option" data-value="1">Ajuda em um projeto</div>
-                                <div class="option" data-value="2">Parceria de longo prazo</div>
-                                <div class="option" data-value="3">Contratar em tempo integral</div>
-                                <div class="option" data-value="4">Apenas dizer "Oi!"</div>
+                                <div class="option" data-value="Ajuda em um projeto">Ajuda em um projeto</div>
+                                <div class="option" data-value="Parceria de longo prazo">Parceria de longo prazo</div>
+                                <div class="option" data-value="Contratar em tempo integral">Contratar em tempo integral</div>
+                                <div class="option" data-value="Apenas dizer 'Oi!'">Apenas dizer "Oi!"</div>
                             </div>
                         </div>
+                        <input type="hidden" name="servico" id="input-servico" required>
                     </div>
                     <div class="m-3 col">
                         <label for="select-budget">Orçamento</label>
@@ -77,12 +78,14 @@ $dotenv->load();
                                 </svg>
                             </div>
                             <div class="options-container">
-                                <div class="option" data-value="1">R$1000 - R$2500</div>
-                                <div class="option" data-value="2">R$2500 - R$5000</div>
-                                <div class="option" data-value="3">R$5000 - R$10000</div>
-                                <div class="option" data-value="4">R$10000 ou mais</div>
+                                <div class="option" data-value="Não sei responder">Não sei responder</div>
+                                <div class="option" data-value="R$1000 - R$2500">R$1000 - R$2500</div>
+                                <div class="option" data-value="R$2500 - R$5000">R$2500 - R$5000</div>
+                                <div class="option" data-value="R$5000 - R$10000">R$5000 - R$10000</div>
+                                <div class="option" data-value="R$10000 ou mais">R$10000 ou mais</div>
                             </div>
                         </div>
+                        <input type="hidden" name="budget" id="input-budget" required>
                     </div>
                 </div>
                 <div class="message-box">
@@ -98,7 +101,11 @@ $dotenv->load();
                     </script>
                 </div>
                 <div class="contato-form-btns">
-                    <button type="submit">
+                    <button class="g-recaptcha"
+                        data-sitekey="6LeGTUkqAAAAAFZBhHpB1N6edJsCavtCMUr-G1Ef"
+                        data-callback='onSubmit'
+                        data-action='submit'
+                        data-size="invisible">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"
                             x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20"
                             enable-background="new 0 0 20 20" space="preserve">
@@ -108,8 +115,13 @@ $dotenv->load();
                         </svg>
                         Enviar mensagem
                     </button>
-                    <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_PUBLIC_KEY']?>"
-                        style="margin-left: 15px; margin-bottom: 30px;" data-theme="dark"></div>
+
+                    <!-- Replace the variables below. -->
+                    <script>
+                        function onSubmit(token) {
+                            document.getElementById("formulario-contato").submit();
+                        }
+                    </script>
                 </div>
             </form>
         </div>

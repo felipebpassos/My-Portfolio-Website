@@ -17,12 +17,13 @@ function sanitize_input($data) {
 }
 
 // Verifica se o formulário foi submetido
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POST['whatsapp']) && isset($_POST['tratamento']) && isset($_POST['mensagem'])) {
-    // Sanitize input data
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POST['whatsapp']) && isset($_POST['servico']) && isset($_POST['budget'])) {
+    // Sanitiza os dados de entrada
     $nome = sanitize_input($_POST["nome"]);
-    $celular = sanitize_input($_POST["whatsapp"]);
-    $tratamento = sanitize_input($_POST["tratamento"]);
-    $mensagem = sanitize_input($_POST["mensagem"]);
+    $whatsapp = sanitize_input($_POST["whatsapp"]);
+    $servico = html_entity_decode(sanitize_input($_POST["servico"])); // Decodifica entidades HTML
+    $budget = html_entity_decode(sanitize_input($_POST["budget"])); // Decodifica entidades HTML
+    $mensagem = isset($_POST["mensagem"]) ? sanitize_input($_POST["mensagem"]) : ''; // Mensagem opcional
 
     // Cria uma nova instância do PHPMailer
     $mail = new PHPMailer(true);
@@ -38,12 +39,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POS
         $mail->Port = $_ENV['SMTP_PORT'];
 
         // Define o remetente e o destinatário
-        $mail->setFrom($_ENV['SMTP_USER'], 'Simplify Web');
+        $mail->setFrom($_ENV['SMTP_USER'], 'Site de Contato');
         $mail->addAddress($_ENV['SMTP_USER']);
 
-        // Define o assunto e o corpo do e-mail
+        // Define o charset como UTF-8 para evitar problemas com acentuação
+        $mail->CharSet = 'UTF-8';
+
+        // Define o assunto do e-mail
         $mail->Subject = 'Novo contato do site';
-        $mail->Body = "Nome: $nome\nWhatsapp: $celular\nTratamento: $tratamento\nMensagem:\n$mensagem\n";
+
+        // Monta o corpo do e-mail
+        $body = "Nome: $nome\n";
+        $body .= "Whatsapp: $whatsapp\n";
+        $body .= "Serviço: $servico\n";
+        $body .= "Orçamento: $budget\n";
+        $body .= $mensagem ? "Mensagem:\n$mensagem\n" : "Mensagem: [Não informada]\n";
+
+        $mail->Body = $body;
 
         // Envia o e-mail
         $mail->send();
@@ -51,15 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POS
         exit();
 
     } catch (Exception $e) {
-        
         header("Location: " . $_ENV['SITE_URL'] . "?error=Erro+no+envio+do+email");
         exit();
-
     }
 
 } else {
-
     header("Location: " . $_ENV['SITE_URL'] . "?error=Erro+no+envio+da+mensagem");
     exit();
-
 }

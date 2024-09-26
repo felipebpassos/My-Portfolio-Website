@@ -1,5 +1,5 @@
 <!-- Popup serviço: SITES E LANDING PAGES -->
-<div class="popup hidden" id="servico-popup">
+<div class="popup service hidden" id="servico-popup">
 
     <div class="close-popup">
         <div class="close" id="close-servico" onmouseover="startAnimation()" onmouseout="resetAnimation()">
@@ -37,9 +37,9 @@
                     <p>Aumente as taxas de conversão do seu produto ou serviço com landing pages que proporcionam
                         uma
                         boa experiência do usuário -
-                        interfaces amigáveis, modernas e de rápido carregamento - e através de um posicionamento
+                        interfaces amigáveis, modernas e de rápido carregamento - e com posicionamento
                         estratégico de
-                        elementos e mensagens na tela.</p>
+                        elementos e mensagens na tela (CTAs).</p>
                 </div>
             </div>
             <div class="trabalho">
@@ -80,18 +80,6 @@
                     <p>Cative e engaje seu público-alvo com mensagens claras, persuasivas e orientadas para uma
                         venda ou
                         qualquer outra ação.</p>
-                </div>
-            </div>
-            <div class="trabalho">
-                <li>
-                    <p><span class="mark"></span>Painel de edição de conteúdo</p>
-                    <svg width="18" height="12" viewBox="0 0 42 25">
-                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
-                    </svg>
-                </li>
-                <div class="explicacao">
-                    <p>Atualize seções do seu site sem necessidade de código, através de um painel administrativo
-                        simples e intuitivo</p>
                 </div>
             </div>
         </ul>
@@ -146,14 +134,14 @@
             </div>
             <div class="trabalho">
                 <li>
-                    <p><span class="mark"></span>Integrações com sistemas de terceiros</p>
+                    <p><span class="mark"></span>Integrações com plataformas e sistemas do mercado</p>
                     <svg width="18" height="12" viewBox="0 0 42 25">
                         <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
                     </svg>
                 </li>
                 <div class="explicacao">
-                    <p>Conectamos seu sistema com APIs de terceiros, proporcionando uma interoperabilidade e o
-                        funcionamento harmonioso do seu sistema com outras plataformas do mercado.</p>
+                    <p>Conectamos seu sistema com outras plataformas - CRMs, ERPs, entre outras -  proporcionando uma interoperabilidade e 
+                        complementariedade do seu sistema com outras soluções existentes no mercado.</p>
                 </div>
             </div>
             <div class="trabalho">

@@ -1,3 +1,16 @@
+<?php 
+
+// Carrega o autoload do Composer para carregar as classes do PHPMailer e Dotenv
+require 'vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+// Carrega as variáveis do arquivo .env que está na pasta anterior
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,9 +23,7 @@
     <meta name="robots" content="index,follow">
 
     <meta property="og:image" content="./img/logo-share.png">
-    <meta property="og:title" content="Simplify Web">
-    <meta property="og:description" content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações">
-
+    <meta property="og:description" content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
 
     <title>Simplify Web</title>
 
@@ -28,7 +39,10 @@
     <!-- Estilo Ondas Background -->
     <link rel="stylesheet" href="./css/wave.css">
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $_ENV['RECAPTCHA_PUBLIC_KEY']; ?>"></script>
+
+</head>
 </head>
 
 <body>
@@ -140,7 +154,7 @@
     </div>
 
     <!-- TRANSLATOR SELECT -->
-    <div class="language-translator">
+    <div class="language-translator hidden">
         <img src="./img/google_translate.png" alt="Google Translate" />
         <div class="op-language">
             <div style="margin-top: 5px;">
@@ -280,8 +294,8 @@
                 <h1>Sites Profissionais</h1>
                 <span>SITES E LANDING PAGES</span>
                 <span class="ver-cases">Ver Cases</span>
-                <p>Vitrine digita moderna, de rápido carregamento, que prende a atenção do cliente
-                    e passa credibilidade ao seu produto ou serviço.</p>
+                <p>Vitrines digitais modernass, de rápido carregamento, que prendem a atenção do cliente
+                    e passam credibilidade ao seu produto ou serviço.</p>
             </div>
         </div>
 
@@ -395,6 +409,7 @@
     <script src="./js/cursor.js"></script>
     <script src="./js/popups.js"></script>
     <script src="./js/form-inputs.js"></script>
+    <script src="./js/send-form.js"></script>
     <script src="./js/fade-in-element.js"></script>
     <script src="./js/accordion.js"></script>
 

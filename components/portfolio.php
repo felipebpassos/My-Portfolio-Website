@@ -1,5 +1,5 @@
 <!-- Popup PORTFOLIO -->
-<div class="popup hidden" id="portfolio-popup">
+<div class="popup hidden" id="portfolio-popup" style="justify-content: center; align-items: center;">
 
     <div class="close-popup">
         <div class="close" id="close-portfolio" onmouseover="startAnimation()" onmouseout="resetAnimation()">
@@ -17,4 +17,12 @@
         </div>
     </div>
 
+    <!-- Mensagem centralizada -->
+    <div class="popup-content" style="text-align: center; margin-top: 50px;">
+        <h1 style="font-size: 3rem; color: white;">Em breve.</h1>
+        <p style="font-size: 1.2rem; color: white;">Entre em contato para mais informações.</p>
+        <a href="https://wa.me/5579996010545?text=Oi!%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20conhecer%20seu%20portfolio." target="_blank" style="font-size: 1.2rem; color: #2ad9df; text-decoration: none;">
+            Clique aqui
+        </a>
+    </div>
 </div>

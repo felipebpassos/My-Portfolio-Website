@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'AvenirLight';
+    src: url('../fonts/Avenir Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirBook';
+    src: url('../fonts/Avenir Book.ttf') format('truetype');
+    font-weight: 400; /* Book */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url('../fonts/Avenir Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirHeavy';
+    src: url('../fonts/Avenir Heavy.ttf') format('truetype');
+    font-weight: 700; /* Heavy */
+    font-style: normal;
+}
+
+html {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'AvenirLight';
+}
+
+#work {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    width: 50%;
+}
+
+#number {
+    padding: 5%;
+    font-size: 1.6rem;
+    font-family: 'AvenirHeavy';
+}
+
+.text-container {
+    display: flex;
+    flex-flow: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 5%;
+    height: 100%;
+}
+
+.text {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 5% 5% 5% 30%;
+}
+
+#title {
+    font-family: 'AvenirHeavy';
+    font-size: 3rem;
+    line-height: 2.5em;
+}
+
+#roles {
+    font-family: 'AvenirMedium';
+}
+
+#description {
+    font-family: 'AvenirBook';
+}
+
+#type {
+    padding: 5%;
+    font-size: 1.5rem;
+}
