@@ -20,7 +20,7 @@
     max-height: 150px;
 }
 
-.bottom {height: 500px; background-color: rgb(99, 171, 194);}
+.bottom {height: calc(60dvh); background-color: rgb(99, 171, 194);}
 
 /* Animation */
 

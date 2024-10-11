@@ -462,7 +462,7 @@ nav p.clicked {
 }
 
 .menu ul li:hover {
-    color: rgb(42, 217, 223);
+    color: #2ad9df;
 }
 
 .menu ul li span {
@@ -1202,8 +1202,7 @@ main {
     overflow: auto;
     z-index: 9997;
     background-color: rgb(15, 15, 15);
-    padding-top: 40px;
-
+    padding-top: 60px;
     /* Esconder a barra de rolagem em navegadores WebKit (Chrome, Safari) */
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -1552,7 +1551,8 @@ main {
     }
 
     .apresentacao-principal img {
-        right: -150px;
+        right: -160px;
+        height: 82dvh;
     }
 
     .contato-submit-box {
@@ -1586,6 +1586,10 @@ main {
 
     .foto-box {
         right: 30px;
+    }
+
+    .popup {
+        padding-top: 150px;
     }
 }
 
@@ -1625,7 +1629,8 @@ main {
     }
 
     .apresentacao-principal img {
-        right: -200px;
+        right: -100px;
+        height: 80dvh;
     }
 
     .contato-submit-box {
@@ -1658,6 +1663,10 @@ main {
     #contato h1 {
         top: 5dvh;
         font-size: 50px;
+    }
+
+    .popup {
+        padding-top: 160px;
     }
 }
 
@@ -1808,23 +1817,6 @@ main {
 
 @media screen and ((max-aspect-ratio: 1/1)) {
 
-    .toggle-menu,
-    .close-menu,
-    .close-popup {
-        right: 10px;
-        top: 10px;
-    }
-
-    .menu ul li {
-        margin-bottom: 20px;
-    }
-
-    .logo {
-        left: 7%;
-        top: 10px;
-        padding-left: 0;
-    }
-
     nav {
         display: none;
     }
@@ -1847,9 +1839,12 @@ main {
         width: 100%;
     }
 
+    .logo {
+        left: 7%;
+    }
+
     .cargo {
         margin-left: 7%;
-        font-size: 12px;
     }
 
     .apresentacao-principal h1 {
@@ -1865,7 +1860,7 @@ main {
     .apresentacao-principal img {
         height: 60dvh;
         right: -85px;
-        bottom: 16%;
+        bottom: 14%;
     }
 
     .descricao {
@@ -1876,13 +1871,8 @@ main {
         z-index: 9991;
     }
 
-    .descricao p {
-        font-size: 13px;
-    }
-
     .contato-submit-box {
         left: 7%;
-        font-size: 15px;
     }
 
     .section-box {
@@ -1894,29 +1884,11 @@ main {
     }
 
     #sobre .texto {
-        font-size: 18px;
         text-align: justify;
     }
 
     #servico-popup .texto {
-        font-size: 15px;
         text-align: justify;
-    }
-
-    #sobre .parceiros ul li img {
-        height: 50px;
-    }
-
-    #palazzo img {
-        height: 70px !important;
-    }
-
-    #m4digital img {
-        height: 60px !important;
-    }
-
-    #recz img {
-        height: 30px !important;
     }
 
     .saiba-mais-box {
@@ -1970,26 +1942,8 @@ main {
     }
 
     .servico {
-        margin-bottom: 40px;
         display: block;
         width: 100%;
-    }
-
-    .servico h1 {
-        font-size: 24px;
-    }
-
-    .servico.left h1 {
-        padding-right: 0;
-        font-size: 25px;
-    }
-
-    .servico.right h1 {
-        padding-left: 0;
-    }
-
-    .servico.last h1 {
-        font-size: 24px;
     }
 
     .responsivo {
@@ -2042,16 +1996,12 @@ main {
         margin-right: 25px;
     }
 
-    .formulario h3 {
-        font-size: 18px;
-    }
-
     .row {
         display: block;
     }
 
     .popup {
-        padding-top: 80px;
+        padding-top: 60px;
     }
 
     .popup.service {
@@ -2061,15 +2011,6 @@ main {
     .accordion-1 {
         width: 100%;
         margin-top: 20px;
-    }
-
-    .accordion-1 li p {
-        font-size: 15px;
-    }
-
-    .explicacao p {
-        font-size: 13px;
-        line-height: 1.6em;
     }
 
     #contato-form form {
@@ -2082,6 +2023,107 @@ main {
 
     #contato-form form button {
         margin-bottom: 30px;
+    }
+}
+
+@media screen and ((max-aspect-ratio: 1/1) and (max-width: 700px)) {
+
+    .toggle-menu,
+    .close-menu,
+    .close-popup {
+        right: 10px;
+        top: 10px;
+    }
+
+    .menu ul li {
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        top: 10px;
+        padding-left: 0;
+    }
+
+    .cargo {
+        font-size: 12px;
+    }
+
+    .descricao p {
+        font-size: 13px;
+    }
+
+    .contato-submit-box {
+        font-size: 15px;
+    }
+
+    #sobre .texto {
+        font-size: 18px;
+    }
+
+    #servico-popup .texto {
+        font-size: 15px;
+    }
+
+    #sobre .parceiros ul li img {
+        height: 50px;
+    }
+
+    #palazzo img {
+        height: 70px !important;
+    }
+
+    #m4digital img {
+        height: 60px !important;
+    }
+
+    #recz img {
+        height: 30px !important;
+    }
+
+    .portfolio h1 {
+        font-size: 35px;
+    }
+
+    .portfolio span {
+        font-size: 12px;
+    }
+
+    .portfolio p {
+        font-size: 15px;
+    }
+
+    .servico {
+        margin-bottom: 40px;
+    }
+
+    .servico h1 {
+        font-size: 24px;
+    }
+
+    .servico.left h1 {
+        padding-right: 0;
+        font-size: 25px;
+    }
+
+    .servico.right h1 {
+        padding-left: 0;
+    }
+
+    .servico.last h1 {
+        font-size: 24px;
+    }
+
+    .formulario h3 {
+        font-size: 18px;
+    }
+
+    .accordion-1 li p {
+        font-size: 15px;
+    }
+
+    .explicacao p {
+        font-size: 13px;
+        line-height: 1.6em;
     }
 }
 
@@ -2144,6 +2186,14 @@ main {
 
     .portfolio:hover span {
         transform: translate(-50%, -35dvh);
+    }
+
+    .popup {
+        padding-top: 120px;
+    }
+
+    .popup.service {
+        padding-top: 120px;
     }
 }
 
