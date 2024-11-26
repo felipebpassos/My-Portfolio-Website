@@ -51,7 +51,9 @@ body::-webkit-scrollbar {
 }
 
 /* Esconde badge do recaptcha */
-.grecaptcha-badge { opacity:0; }
+.grecaptcha-badge {
+    opacity: 0;
+}
 
 .responsivo {
     display: none;
@@ -193,23 +195,33 @@ a {
     /* Tempo de atraso para a terceira bola */
 }
 
-.logo {
+.top-left-container {
     position: absolute;
-    border: none;
     top: 40px;
     left: 50px;
+    display: flex;
+    z-index: 9997;
+}
+
+.logo {
+    border: none;
     background-color: transparent;
     padding: 7px 13px;
-    z-index: 9997;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    transition: filter 1s ease, transform 0.8s ease;
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Manrope', sans-serif;
+    transition: filter 0.6s ease, transform 0.8s ease, color 1.5s ease;
+}
+
+.logo:hover {
+    color: rgba(255, 255, 255, 1);
 }
 
 .logo h1 {
     font-size: 22px;
     display: flex;
     align-items: baseline;
+    margin: 0;
 }
 
 nav {
@@ -383,7 +395,7 @@ nav p.clicked {
     background-color: transparent;
     color: white;
     z-index: 9997;
-    transition: filter 1s ease, transform 0.8s ease;
+    transition: filter 0.6s ease, transform 0.8s ease;
 }
 
 .toggle-menu {
@@ -508,6 +520,7 @@ main {
     margin-bottom: 15dvh;
     height: 76dvh;
     width: 60%;
+    max-width: 1200px;
     transform: translateX(60px);
 }
 
@@ -1172,23 +1185,43 @@ main {
 
 .redes-sociais {
     margin-left: 100px;
-    display: flex;
     align-items: center;
 }
 
+.redes-contato {
+    align-items: end;
+    padding-bottom: 8px;
+    transition: filter 0.6s ease;
+}
+
+.redes-sociais,
+.redes-contato {
+    display: flex;
+}
+
 .redes-sociais li {
-    display: inline-block;
     margin-right: 40px;
 }
 
-.redes-sociais li button {
+.redes-contato li {
+    margin-right: 12px;
+}
+
+.redes-sociais li,
+.redes-contato li {
+    display: inline-block;
+}
+
+.redes-sociais li button,
+.redes-contato button {
     border: none;
     font-size: 17px;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.redes-sociais li button:hover {
+.redes-sociais li button:hover,
+.redes-contato li button:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1459,7 +1492,7 @@ main {
 
 @media(max-width: 1100px) {
 
-    .logo,
+    .top-left-container,
     nav,
     .animation-container {
         left: 30px;
@@ -1487,7 +1520,7 @@ main {
         display: none !important;
     }
 
-    .logo,
+    .top-left-container,
     nav,
     .animation-container {
         left: 30px;
@@ -1681,7 +1714,7 @@ main {
         display: none !important;
     }
 
-    .logo,
+    .top-left-container,
     .toggle-menu,
     .close-menu,
     .close-popup {
@@ -1839,7 +1872,7 @@ main {
         width: 100%;
     }
 
-    .logo {
+    .top-left-container {
         left: 7%;
     }
 
@@ -1876,9 +1909,9 @@ main {
     }
 
     .section-box {
-        margin-top: 15dvh;
+        margin-top: 10dvh;
         margin-bottom: 15dvh;
-        height: 70dvh;
+        height: 80dvh;
         width: 85%;
         transform: translateX(0);
     }
@@ -1932,7 +1965,7 @@ main {
     .portfolio:hover h1 {
         transform: translateY(-180px);
     }
-    
+
     .portfolio:hover span {
         transform: translate(-50%, -180px);
     }
@@ -1965,22 +1998,22 @@ main {
     }
 
     #contato h3 {
-        bottom: 220px;
+        bottom: 280px;
     }
 
     #contato hr {
-        bottom: 130px;
+        bottom: 190px;
     }
 
     .foto-box {
-        bottom: 130px;
+        bottom: 190px;
         right: 30px;
         height: 160px;
         width: 160px;
     }
 
     .contatos {
-        bottom: -40px;
+        bottom: 20px;
         justify-content: space-between;
     }
 
@@ -2039,8 +2072,11 @@ main {
         margin-bottom: 20px;
     }
 
-    .logo {
+    .top-left-container {
         top: 10px;
+    }
+
+    .logo {
         padding-left: 0;
     }
 
@@ -2144,13 +2180,18 @@ main {
 
 @media screen and ((min-height: 1000px) and (max-aspect-ratio: 1/1)) {
 
-    .logo {
-        left: 9%;
-        transform: scale(1.4);
+    .top-left-container {
+        left: 7%;
         top: 40px;
     }
 
-    .toggle-menu, .close-menu, .close-popup {
+    .logo {
+        padding-left: 0;
+    }
+
+    .toggle-menu,
+    .close-menu,
+    .close-popup {
         transform: scale(1.4);
         right: 8%;
         top: 40px;
@@ -2199,15 +2240,6 @@ main {
 
 @media screen and ((min-height: 1200px) and (max-aspect-ratio: 1/1)) {
 
-    .logo {
-        left: 8%;
-    }
-
-    .logo {
-        left: 10%;
-        transform: scale(1.6);
-    }
-
     .cargo {
         font-size: 24px;
     }
@@ -2246,10 +2278,18 @@ main {
         margin-bottom: 20px;
     }
 
-    .logo {
+    .top-left-container {
         left: 7%;
         top: 10px;
+    }
+
+    .logo {
         padding-left: 0;
+        margin-right: 0;
+    }
+
+    .redes-sociais li button, .redes-contato button {
+        font-size: 15px;
     }
 
     nav {
@@ -2387,7 +2427,7 @@ main {
     .portfolio:hover h1 {
         transform: translateY(-180px);
     }
-    
+
     .portfolio:hover span {
         transform: translate(-50%, -180px);
     }
@@ -2510,6 +2550,35 @@ main {
     #contato-form form button {
         margin-bottom: 30px;
     }
+}
+
+@media (min-width: 1500px) {
+
+    .logo h1 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        padding: 60px 80px;
+        width: 45%;
+    }
+
+    .descricao p {
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1600px) {
+
+    .apresentacao-principal h1 {
+        font-size: 125px;
+    }
+
+    .typed-text {
+        font-size: 120px;
+    }
+
 }
 
 .ativo {

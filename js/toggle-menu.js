@@ -1,3 +1,5 @@
+const logo = document.querySelector('.logo');
+const redes = document.querySelector('.redes-contato');
 const toggleMenuButton = document.querySelector('.toggle-menu');
 const closeMenu = document.querySelector('.close-menu');
 const menu = document.querySelector('.menu');
@@ -14,6 +16,8 @@ toggleMenuButton.addEventListener('click', () => {
     });
     animation.classList.add('blur');
     translation.classList.add('blur');
+    logo.classList.add('blur');
+    redes.classList.add('blur');
     toggleMenuButton.classList.add('hidden');
     closeMenu.classList.remove('hidden');
     menu.classList.remove('invisible');
@@ -30,6 +34,8 @@ closeMenu.addEventListener('click', () => {
     });
     animation.classList.remove('blur');
     translation.classList.remove('blur');
+    logo.classList.remove('blur');
+    redes.classList.remove('blur');
     toggleMenuButton.classList.remove('hidden');
     closeMenu.classList.add('hidden');
     menu.classList.add('invisible');

@@ -1,5 +1,6 @@
 const navItems = document.querySelectorAll('nav div');
 const logoBtn = document.getElementById('logo');
+const redesContato = document.querySelector('.redes-contato');
 const portfolio = document.getElementById('portfolios');
 const solucoes = document.getElementById('solucoes');
 const scrollIcon = document.getElementById('scroll-ico');
@@ -122,6 +123,8 @@ menuItems.forEach((item, index) => {
         });
         animation.classList.remove('blur');
         translation.classList.remove('blur');
+        logoBtn.classList.remove('blur');
+        redesContato.classList.remove('blur');
         toggleMenuButton.classList.remove('hidden');
         closeMenu.classList.add('hidden');
         menu.classList.add('invisible');
@@ -143,6 +146,11 @@ function scrollToSection(index) {
     });
 }
 
+// Detecta mudanças na orientação da tela
+function checkPortraitMode() {
+    return window.innerHeight > window.innerWidth;
+}
+
 // Função para atualizar os botões de navegação
 function updateNavigationButtons(currentIndex) {
     navItems.forEach(navItem => {
@@ -160,4 +168,13 @@ function updateNavigationButtons(currentIndex) {
     const currentNavItem = navItems[currentIndex];
     currentNavItem.querySelector('li').classList.add('clicked');
     currentNavItem.querySelector('p').classList.add('clicked');
+
+    // Verifica se estamos em modo portrait e se a seção não é a primeira
+    if (checkPortraitMode() && currentIndex !== 0) {
+        logoBtn.classList.add('hidden');
+        redesContato.classList.add('hidden');
+    } else {
+        logoBtn.classList.remove('hidden');
+        redesContato.classList.remove('hidden');
+    }
 }

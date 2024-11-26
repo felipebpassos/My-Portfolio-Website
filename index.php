@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // Carrega o autoload do Composer para carregar as classes do PHPMailer e Dotenv
 require 'vendor/autoload.php';
@@ -17,13 +17,16 @@ $dotenv->load();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Software House referência no desenvolvimento de sites, sistemas, aplicativos e automações.">
+    <meta name="description"
+        content="Software House referência no desenvolvimento de sites, sistemas, aplicativos e automações.">
     <meta name="author" content="Felipe Passos | WEB AND MOBILE FULL STACK DEV">
-    <meta name="keywords" content="software house, software, sistemas, programador experiente, desenvolvedor, desenvolvimento web, desenvolvimento mobile, frontend, backend, aplicativo, app, ios, android, automação, criação de sites, landing pages, programador, experiente, desenvolvimento de software, sob medida, personalizado, Aracaju, Sergipe, Brasil, alta qualidade, bom, melhor">
+    <meta name="keywords"
+        content="software house, software, sistemas, programador experiente, desenvolvedor, desenvolvimento web, desenvolvimento mobile, frontend, backend, aplicativo, app, ios, android, automação, criação de sites, landing pages, programador, experiente, desenvolvimento de software, sob medida, personalizado, Aracaju, Sergipe, Brasil, alta qualidade, bom, melhor">
     <meta name="robots" content="index,follow">
 
     <meta property="og:image" content="./img/logo-share.png">
-    <meta property="og:description" content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
+    <meta property="og:description"
+        content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
 
     <title>Simplify Web</title>
 
@@ -40,7 +43,8 @@ $dotenv->load();
     <link rel="stylesheet" href="./css/wave.css">
 
 
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $_ENV['RECAPTCHA_PUBLIC_KEY']; ?>"></script>
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $_ENV['RECAPTCHA_PUBLIC_KEY']; ?>"></script>
 
 </head>
 </head>
@@ -72,12 +76,19 @@ $dotenv->load();
     </div>
 
 
-    <!-- LOGO -->
-    <button id="logo" class="logo">
-        <h1 style="font-size: 26px;">S<div
-                style="margin-left: 5px; height: 7px; width: 7px; background-color: rgb(33, 156, 160); border-radius: 50%;">
-            </div>W</h1>
-    </button>
+    <div class="top-left-container">
+        <!-- LOGO -->
+        <button id="logo" class="logo">
+            <h1>FELIPE PASSOS</h1>
+        </button>
+        <ul class="redes-contato">
+            <li><a href="https://www.linkedin.com/in/felipe-passos-70a075138/?originalSubdomain=br"
+                    target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+            </li>
+            <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
+                            class="fa-brands fa-github"></i></button></a></li>
+        </ul>
+    </div>
 
     <!-- NAV BAR -->
     <nav>
@@ -360,7 +371,7 @@ $dotenv->load();
                                         class="fa-brands fa-instagram"></i></button></a></li>
                         <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
                                         class="fa-brands fa-github"></i></button></a></li>
-                        <li><a href="https://www.linkedin.com/in/felipe-b-passos-70a075138/?originalSubdomain=br"
+                        <li><a href="https://www.linkedin.com/in/felipe-passos-70a075138/?originalSubdomain=br"
                                 target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
                         </li>
                     </ul>
