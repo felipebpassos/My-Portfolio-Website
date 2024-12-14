@@ -2581,6 +2581,30 @@ main {
 
 }
 
+@media (min-width: 2200px) {
+
+    .apresentacao-principal h1 {
+        font-size: 155px;
+    }
+
+    .typed-text {
+        font-size: 140px;
+    }
+
+}
+
+@media (min-width: 2400px) {
+
+    .apresentacao-principal h1 {
+        font-size: 155px;
+    }
+
+    .typed-text {
+        font-size: 140px;
+    }
+
+}
+
 .ativo {
     opacity: 1 !important;
 }
