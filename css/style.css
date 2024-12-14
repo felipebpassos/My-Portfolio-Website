@@ -2591,16 +2591,21 @@ main {
         font-size: 140px;
     }
 
+    .portfolio p {
+        width: 60%;
+        font-size: 18px;
+    }
+
 }
 
 @media (min-width: 2400px) {
 
     .apresentacao-principal h1 {
-        font-size: 155px;
+        font-size: 165px;
     }
 
     .typed-text {
-        font-size: 140px;
+        font-size: 150px;
     }
 
 }
