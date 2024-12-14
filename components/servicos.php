@@ -98,14 +98,14 @@
         <ul class="accordion-1 fade-in-element">
             <div class="trabalho">
                 <li>
-                    <p><span class="mark"></span>E-commerces, sistemas de gestão diversos, automações</p>
+                    <p><span class="mark"></span>E-commerces e PDVs, marketplaces, Apps, sistemas de gestão e automações</p>
                     <svg width="18" height="12" viewBox="0 0 42 25">
                         <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
                     </svg>
                 </li>
                 <div class="explicacao">
                     <p>Desenvolvimento de projetos variados para diferentes modelos de negócios, oferecendo soluções
-                        inovadoras e orientadas para resultados em todos os setores.</p>
+                        eficientes e orientadas para resultados.</p>
                 </div>
             </div>
             <div class="trabalho">
@@ -134,7 +134,7 @@
             </div>
             <div class="trabalho">
                 <li>
-                    <p><span class="mark"></span>Integrações com plataformas e sistemas do mercado</p>
+                    <p><span class="mark"></span>Integrações com sistemas, serviços e APIs do mercado</p>
                     <svg width="18" height="12" viewBox="0 0 42 25">
                         <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
                     </svg>
