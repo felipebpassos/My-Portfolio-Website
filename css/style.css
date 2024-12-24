@@ -568,6 +568,7 @@ main {
     transform: translateY(-50%);
     left: 10%;
     z-index: 998;
+    letter-spacing: 1px;
 }
 
 .typed-text {
@@ -2579,12 +2580,18 @@ main {
         font-size: 120px;
     }
 
+    #contato h3 {
+        font-size: 22px;
+        max-width: 700px;
+    }
+
 }
 
 @media (min-width: 2200px) {
 
     .apresentacao-principal h1 {
         font-size: 155px;
+        letter-spacing: -1px;
     }
 
     .typed-text {
