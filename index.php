@@ -87,6 +87,12 @@ $dotenv->load();
             </li>
             <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
                             class="fa-brands fa-github"></i></button></a></li>
+            <li id="wp">
+                <a href="https://wa.me/5579996010545?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                    target="_blank">
+                    <button><i class="fa-brands fa-whatsapp"></i></button>
+                </a>
+            </li>
         </ul>
     </div>
 
@@ -400,7 +406,7 @@ $dotenv->load();
     ?>
 
     <!-- Whatsapp-button -->
-    <a href="https://api.whatsapp.com/send?phone=5579996010545" class="whatsapp-button" target="_blank">
+    <a href="https://wa.me/5579996010545?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-button" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
         <span>Contato</span>
     </a>
