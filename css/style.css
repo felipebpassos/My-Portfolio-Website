@@ -1205,7 +1205,7 @@ main {
 }
 
 .redes-contato li {
-    margin-right: 2px;
+    margin-right: 0px;
 }
 
 .redes-sociais li,
@@ -1867,6 +1867,10 @@ main {
         display: none;
     }
 
+    .redes-contato li:first-child button {
+        padding-left: 0;
+    }    
+
     #wp {
         display: inline-block;
     }
@@ -2093,6 +2097,14 @@ main {
         padding-left: 0;
     }
 
+    .redes-contato li:first-child button {
+        padding-left: 0;
+    }    
+
+    #wp {
+        display: inline-block;
+    }
+
     .cargo {
         font-size: 12px;
     }
@@ -2300,6 +2312,14 @@ main {
         padding-left: 0;
         margin-right: 0;
         display: none;
+    }
+
+    .redes-contato li:first-child button {
+        padding-left: 0;
+    }    
+
+    #wp {
+        display: inline-block;
     }
 
     .redes-sociais li button, .redes-contato button {
