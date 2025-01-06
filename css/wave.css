@@ -76,7 +76,7 @@
     }
 }
 
-@media screen and ((max-device-aspect-ratio: 1/1) and (min-height: 1000px)) {
+@media screen and ((max-aspect-ratio: 1/1) and (min-height: 1000px)) {
 
     .waves {
         height: 8dvh;

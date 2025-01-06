@@ -195,7 +195,7 @@ a {
     /* Tempo de atraso para a terceira bola */
 }
 
-.top-left-container {
+.logo {
     position: absolute;
     top: 40px;
     left: 50px;
@@ -399,6 +399,7 @@ nav p.clicked {
 }
 
 .toggle-menu {
+    display: none;
     top: 40px;
     right: 40px;
 }
@@ -1190,13 +1191,20 @@ main {
 }
 
 .redes-contato {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 9997;
+}
+
+.redes-container {
     align-items: end;
     padding-bottom: 0px;
     transition: filter 0.6s ease;
 }
 
 .redes-sociais,
-.redes-contato {
+.redes-container {
     display: flex;
 }
 
@@ -1221,12 +1229,12 @@ main {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.redes-contato li button {
+.redes-contato button {
     padding: 10px;
 }
 
 .redes-sociais li button:hover,
-.redes-contato li button:hover {
+.redes-contato button:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1501,7 +1509,7 @@ main {
 
 @media(max-width: 1100px) {
 
-    .top-left-container,
+    .logo,
     nav,
     .animation-container {
         left: 30px;
@@ -1529,7 +1537,7 @@ main {
         display: none !important;
     }
 
-    .top-left-container,
+    .logo,
     nav,
     .animation-container {
         left: 30px;
@@ -1723,7 +1731,7 @@ main {
         display: none !important;
     }
 
-    .top-left-container,
+    .logo,
     .toggle-menu,
     .close-menu,
     .close-popup {
@@ -1869,7 +1877,7 @@ main {
 
     .redes-contato li:first-child button {
         padding-left: 0;
-    }    
+    }
 
     #wp {
         display: inline-block;
@@ -1889,7 +1897,7 @@ main {
         width: 100%;
     }
 
-    .top-left-container {
+    .logo {
         left: 7%;
     }
 
@@ -2089,7 +2097,7 @@ main {
         margin-bottom: 20px;
     }
 
-    .top-left-container {
+    .logo {
         top: 10px;
     }
 
@@ -2099,7 +2107,7 @@ main {
 
     .redes-contato li:first-child button {
         padding-left: 0;
-    }    
+    }
 
     #wp {
         display: inline-block;
@@ -2205,7 +2213,7 @@ main {
 
 @media screen and ((min-height: 1000px) and (max-aspect-ratio: 1/1)) {
 
-    .top-left-container {
+    .logo {
         left: 7%;
         top: 40px;
     }
@@ -2299,13 +2307,12 @@ main {
         top: 10px;
     }
 
-    .menu ul li {
-        margin-bottom: 20px;
+    .toggle-menu {
+        display: block;
     }
 
-    .top-left-container {
-        left: 7%;
-        top: 10px;
+    .menu ul li {
+        margin-bottom: 20px;
     }
 
     .logo {
@@ -2314,15 +2321,21 @@ main {
         display: none;
     }
 
+    .redes-contato {
+        left: 7%;
+        top: 10px;
+    }
+
     .redes-contato li:first-child button {
         padding-left: 0;
-    }    
+    }
 
     #wp {
         display: inline-block;
     }
 
-    .redes-sociais li button, .redes-contato button {
+    .redes-sociais li button,
+    .redes-contato button {
         font-size: 15px;
     }
 
@@ -2621,6 +2634,14 @@ main {
 }
 
 @media (min-width: 2200px) {
+
+    .redes-contato li {
+        margin-right: 10px;
+    }
+
+    .redes-contato button {
+        font-size: 19px;
+    }
 
     .apresentacao-principal h1 {
         font-size: 155px;

@@ -75,26 +75,10 @@ $dotenv->load();
         </div>
     </div>
 
-
-    <div class="top-left-container">
-        <!-- LOGO -->
-        <button id="logo" class="logo">
-            <h1>FELIPE PASSOS</h1>
-        </button>
-        <ul class="redes-contato">
-            <li><a href="https://www.linkedin.com/in/felipe-passos-70a075138/?originalSubdomain=br"
-                    target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
-            </li>
-            <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
-                            class="fa-brands fa-github"></i></button></a></li>
-            <li id="wp">
-                <a href="https://wa.me/5579996010545?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
-                    target="_blank">
-                    <button><i class="fa-brands fa-whatsapp"></i></button>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <!-- LOGO -->
+    <button id="logo" class="logo">
+        <h1>FELIPE PASSOS</h1>
+    </button>
 
     <!-- NAV BAR -->
     <nav>
@@ -122,7 +106,7 @@ $dotenv->load();
         </ul>
     </nav>
 
-    <!-- NOT USED -->
+    <!-- SCROLLER ANIMATION (NOT USED) -->
     <div class="animation-container" id="scroll-ico" style="display: none;">
         <div class="scroll-indicator">
             <div class="scroll-icon-container">
@@ -132,6 +116,25 @@ $dotenv->load();
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- REDES SOCIAIS E CONTATO -->
+    <div class="redes-contato">
+        <ul class="redes-container">
+            <li><a href="https://www.linkedin.com/in/felipe-passos-70a075138/?originalSubdomain=br"
+                    target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+            </li>
+            <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
+                            class="fa-brands fa-github"></i></button></a></li>
+            <li><a href="https://www.instagram.com/simplifyweb/" target="_blank"><button><i
+                            class="fa-brands fa-instagram"></i></button></a></li>
+            <li id="wp">
+                <a href="https://wa.me/5579996010545?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                    target="_blank">
+                    <button><i class="fa-brands fa-whatsapp"></i></button>
+                </a>
+            </li>
+        </ul>
     </div>
 
     <!-- TOGGLE MENU BUTTON -->
@@ -406,7 +409,8 @@ $dotenv->load();
     ?>
 
     <!-- Whatsapp-button -->
-    <a href="https://wa.me/5579996010545?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-button" target="_blank">
+    <a href="https://wa.me/5579996010545?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+        class="whatsapp-button" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
         <span>Contato</span>
     </a>
