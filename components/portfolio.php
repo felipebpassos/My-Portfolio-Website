@@ -20,7 +20,7 @@
     <!-- Mensagem centralizada -->
     <div class="popup-content" style="text-align: center; margin-top: 50px;">
         <h1 style="font-size: 3rem; color: white;">Em breve.</h1>
-        <p style="font-size: 1.2rem; color: white; display: flex; align-items: center;">Veja os projetos no <a href="https://github.com/felipebpassos" target="_blank" style="display: flex; width: ffit-content; align-items: center; font-size: 1.2rem; color: #2ad9df; text-decoration: none; margin-left: 5px;">
+        <p style="font-size: 1.2rem; color: white; display: flex; align-items: center;">Veja os projetos no <a href="https://github.com/felipebpassos" target="_blank" style="text-decoration:underline !important; display: flex; width: fit-content; align-items: center; font-size: 1.2rem; color: #2ad9df; text-decoration: none; margin-left: 5px;">
                 <i style="margin-right: 5px;" class="fa-brands fa-github"></i>
                 Github
             </a></p>

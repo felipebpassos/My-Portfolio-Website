@@ -62,17 +62,8 @@ $dotenv->load();
     }
     ?>
 
-    <!-- LOADER / SPLASH SCREEN -->
     <div id="fundo-loader">
         <div id="loader"></div>
-        <div
-            style="width: 220px; position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
-            <div class="loading-animation">
-                <div class="ball ball1"></div>
-                <div class="ball ball2"></div>
-                <div class="ball ball3"></div>
-            </div>
-        </div>
     </div>
 
     <!-- LOGO -->
@@ -126,8 +117,6 @@ $dotenv->load();
             </li>
             <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
                             class="fa-brands fa-github"></i></button></a></li>
-            <li><a href="https://www.instagram.com/simplifyweb/" target="_blank"><button><i
-                            class="fa-brands fa-instagram"></i></button></a></li>
             <li id="wp">
                 <a href="https://wa.me/5579996010545?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
                     target="_blank">

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'AvenirLight';
+    src: url('../fonts/Avenir Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirBook';
+    src: url('../fonts/Avenir Book.ttf') format('truetype');
+    font-weight: 400; /* Book */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url('../fonts/Avenir Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirHeavy';
+    src: url('../fonts/Avenir Heavy.ttf') format('truetype');
+    font-weight: 700; /* Heavy */
+    font-style: normal;
+}
+
+html {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'AvenirLight';
+    background-color: rgb(15, 15, 15);
+    color: #fff;
+}
+
+.tabs {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.tab {
+    padding: 15px 30px;
+    padding-top: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    border-bottom: 3px solid #2ad9df;
+    color: #2ad9df;
+}
+
+main {
+    padding-top: 200px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.project {
+    margin-bottom: 200px;
+}
+
+.carousel-media {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-media img, .carousel-media video {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.description {
+    padding: 15px;
+}
+
+.links {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #0056b3;
+}
