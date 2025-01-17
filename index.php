@@ -18,7 +18,7 @@ $dotenv->load();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description"
-        content="Software House referência no desenvolvimento de sites, sistemas, aplicativos e automações.">
+        content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
     <meta name="author" content="Felipe Passos | WEB AND MOBILE FULL STACK DEV">
     <meta name="keywords"
         content="software house, software, sistemas, programador experiente, desenvolvedor, desenvolvimento web, desenvolvimento mobile, frontend, backend, aplicativo, app, ios, android, automação, criação de sites, landing pages, programador, experiente, desenvolvimento de software, sob medida, personalizado, Aracaju, Sergipe, Brasil, alta qualidade, bom, melhor">
@@ -28,7 +28,7 @@ $dotenv->load();
     <meta property="og:description"
         content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
 
-    <title>Simplify Web</title>
+    <title>Felipe Passos | Simplify Web</title>
 
     <link rel="icon" href="./img/logo1.ico">
 
