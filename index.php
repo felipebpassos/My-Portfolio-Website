@@ -24,7 +24,7 @@ $dotenv->load();
         content="software house, software, sistemas, programador experiente, desenvolvedor, desenvolvimento web, desenvolvimento mobile, frontend, backend, aplicativo, app, ios, android, automação, criação de sites, landing pages, programador, experiente, desenvolvimento de software, sob medida, personalizado, Aracaju, Sergipe, Brasil, alta qualidade, bom, melhor">
     <meta name="robots" content="index,follow">
 
-    <meta property="og:image" content="./img/logo-share.png">
+    <meta property="og:image" content="./img/logo-share.jpeg">
     <meta property="og:description"
         content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
 
