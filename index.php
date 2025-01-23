@@ -17,8 +17,7 @@ $dotenv->load();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description"
-        content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
+    <meta name="description" content="Desenvolvimento de sites de alto padrão, sistemas, aplicativos e automações.">
     <meta name="author" content="Felipe Passos | WEB AND MOBILE FULL STACK DEV">
     <meta name="keywords"
         content="software house, software, sistemas, programador experiente, desenvolvedor, desenvolvimento web, desenvolvimento mobile, frontend, backend, aplicativo, app, ios, android, automação, criação de sites, landing pages, programador, experiente, desenvolvimento de software, sob medida, personalizado, Aracaju, Sergipe, Brasil, alta qualidade, bom, melhor">
@@ -205,10 +204,10 @@ $dotenv->load();
 
                 <p class="cargo">Desenvolvedor Web e Mobile</p>
                 <img src="./img/felipe_passos.png" alt="">
-                <h1>Soluções<br><span id="dynamic-text" class="typed-text"></span><span class="blinking-cursor">|</span>
+                <h1>Soluções<br><span id="dynamic-text" class="typed-text">modernas</span><span class="blinking-cursor">|</span>
                 </h1>
                 <div class="contato-submit-box">
-                    <button id="contato-submit" class="contato-submit">Fale Conosco</button>
+                    <button id="contato-submit" class="contato-submit">Fale Comigo</button>
                 </div>
                 <div class="descricao">
                     <p>Desenvolvedor criativo, especialista na elaboração de Sites e Landing Pages de alto padrão, até
@@ -231,25 +230,43 @@ $dotenv->load();
                 <h5 class="section-title">Sobre</h5>
 
                 <div class="section-content">
-                    <p class="texto">Com ampla experiência em projetos diversos, desde sites personalizados até o
-                        desenvolvimento completo de aplicações Web e mobile, nossa missão é impulsionar seu negócio ou
-                        sua ideia a
-                        conquistar grandes resultados no mercado digital.</p>
-                    <div class="parceiros">
+                    <p class="texto">Desenvolvedor full-stack com 4+ anos de experiência em projetos variados, desde
+                        sites modernos até o desenvolvimento completo de aplicações Web e mobile. Especializado em APIs
+                        REST, bancos de
+                        dados (MySQL, MongoDB), OAuth2, pagamentos, AWS S3, entre outras tecnologias. Desenvolvi,
+                        durante esse tempo, comunicação direta com clientes, garantindo alinhamento de expectativas e
+                        entrega de projetos que combinam alta qualidade com foco na experiência do usuário.</p>
+                    <div class="stack">
                         <ul>
-                            <li id="palazzo">
-                                <img src="./img/palazzo.png" alt="Clínica Palazzo">
-                            </li>
-                            <li id="m4digital">
-                                <img src="./img/m4digital.png" alt="M4Digital">
-                            </li>
-                            <li>
-                                <img src="./img/pomar.png" alt="Pomar Polpa de Frutas">
-                            </li>
-                            <li id="recz">
-                                <img src="./img/recz.png" alt="Recz Films">
-                            </li>
+                            <li><img src="./img/js.png" alt="JavaScript"></li>
+                            <li><img src="./img/type.png" alt="TypeScript"></li>
+                            <li><img src="./img/react.png" alt="React"></li>
+                            <li><img src="./img/node.png" alt="NodeJs"></li>
+                            <li><img src="./img/mysql.png" alt="MySQL"></li>
+                            <li><img src="./img/redis.png" alt="Redis"></li>
+                            <li><img src="./img/aws.png" alt="AWS"></li>
                         </ul>
+                        <ul aria-hidden="true">
+                            <!-- Duplicado para garantir o loop contínuo -->
+                            <li><img src="./img/js.png" alt="JavaScript"></li>
+                            <li><img src="./img/type.png" alt="TypeScript"></li>
+                            <li><img src="./img/react.png" alt="React"></li>
+                            <li><img src="./img/node.png" alt="NodeJs"></li>
+                            <li><img src="./img/mysql.png" alt="MySQL"></li>
+                            <li><img src="./img/redis.png" alt="Redis"></li>
+                            <li><img src="./img/aws.png" alt="AWS"></li>
+                        </ul>
+                    </div>
+                    <div class="cv-box">
+                        <div class="cv">
+                            <a href="https://simplifyweb.com.br/cv" target="_blank" style="display: flex; justify-content: center; align-items: center;">
+                                DOWNLOAD CV
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
+                                    style="margin-left: 3px;">
+                                    <path d="M8 5l9 7-9 7" fill="none" stroke="rgb(42, 217, 223)" stroke-width="2" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -257,23 +274,9 @@ $dotenv->load();
 
         </main>
 
-        <div class="saiba-mais-box">
-            <div class="saiba-mais">
-                <span style="display: flex; justify-content: center; align-items: center;">
-                    SAIBA MAIS
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
-                        style="margin-left: 3px;">
-                        <path d="M8 5l9 7-9 7" fill="none" stroke="rgb(42, 217, 223)" stroke-width="2" />
-                    </svg>
-                </span>
-            </div>
-        </div>
-
         <div class="menu-sobre">
             <div>
                 <ul class="opcoes">
-                    <li id="sobre-mim" style="display: none;">Sobre Mim</li>
-                    <li id="habilidades" style="display: none;">Habilidades</li>
                     <li id="portfolios">Portfolio</li>
                     <li id="solucoes">Soluções</li>
                 </ul>
@@ -363,15 +366,15 @@ $dotenv->load();
                 <div class="foto-box"><img src="./img/perfil.png" alt="Felipe Passos"></div>
 
                 <div class="contatos">
-                    <button class="contato-btn" id="contato-btn">Fale Conosco</button>
+                    <button class="contato-btn" id="contato-btn">Fale Comigo</button>
                     <ul class="redes-sociais">
-                        <li><a href="https://www.instagram.com/simplifyweb/" target="_blank"><button><i
-                                        class="fa-brands fa-instagram"></i></button></a></li>
-                        <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
-                                        class="fa-brands fa-github"></i></button></a></li>
                         <li><a href="https://www.linkedin.com/in/felipe-passos-70a075138/?originalSubdomain=br"
                                 target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
                         </li>
+                        <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
+                                        class="fa-brands fa-github"></i></button></a></li>
+                        <li><a href="https://www.instagram.com/simplifyweb/" target="_blank"><button><i
+                                        class="fa-brands fa-instagram"></i></button></a></li>
                     </ul>
                 </div>
 
@@ -410,7 +413,6 @@ $dotenv->load();
     <!-- JAVASCRIPT BODY -->
     <script src="./js/loading.js"></script>
     <script src="./js/typing-text.js"></script>
-    <script src="./js/saiba-mais.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-parallax.js"></script>
     <script src="./js/move-img.js"></script>

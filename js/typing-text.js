@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const words = ["modernas", "escaláveis", "da sua ideia."];
     let wordIndex = 0;
-    let charIndex = 0;
+    let charIndex = words[0].length; // Começa do tamanho da palavra inicial "modernas"
     const typingDelay = 150;
     const erasingDelay = 100;
     const newWordDelay = 2000; // Tempo de espera após terminar de digitar
@@ -29,5 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    setTimeout(type, newWordDelay); // Começar a digitar após a página carregar
+    // Inicia apagando "modernas"
+    setTimeout(() => {
+        erase();
+    }, newWordDelay);
 });
