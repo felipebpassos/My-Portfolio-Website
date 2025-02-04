@@ -233,9 +233,7 @@ $dotenv->load();
                     <p class="texto">Desenvolvedor full-stack com 4+ anos de experiência em projetos variados, desde
                         sites modernos até o desenvolvimento completo de aplicações Web e mobile. Especializado em APIs
                         REST, bancos de
-                        dados (MySQL, MongoDB), OAuth2, pagamentos, AWS S3, entre outras tecnologias. Desenvolvi,
-                        durante esse tempo, comunicação direta com clientes, garantindo alinhamento de expectativas e
-                        entrega de projetos que combinam alta qualidade com foco na experiência do usuário.</p>
+                        dados (MySQL, MongoDB), OAuth2, pagamentos, AWS S3, entre outras tecnologias. </p>
                     <div class="stack">
                         <ul>
                             <li><img src="./img/js.png" alt="JavaScript"></li>
@@ -259,7 +257,7 @@ $dotenv->load();
                     </div>
                     <div class="cv-box">
                         <div class="cv">
-                            <a href="https://simplifyweb.com.br/cv" target="_blank" style="display: flex; justify-content: center; align-items: center;">
+                            <a href="https://felipepassos.dev/cv" target="_blank" style="display: flex; justify-content: center; align-items: center;">
                                 DOWNLOAD CV
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
                                     style="margin-left: 3px;">
