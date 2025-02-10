@@ -26,7 +26,8 @@ $(document).ready(function () {
     // Para dispositivos não touch (mouse)
     if (!isTouchDevice) {
         $('.portfolio').click(function () {
-            $('#portfolio-popup').removeClass('hidden');
+            var section = $(this).attr('id'); // Obtém o ID do elemento clicado
+            window.location.href = BASE_URL + '/portfolio#' + section; // Redireciona com a âncora
         });
 
         $('.ver-cases').addClass('hidden');
@@ -35,7 +36,8 @@ $(document).ready(function () {
     // Para dispositivos touch
     if (isTouchDevice) {
         $('.ver-cases').click(function () {
-            $('#portfolio-popup').removeClass('hidden');
+            var section = $(this).closest('.portfolio').attr('id'); // Obtém o ID do elemento pai
+            window.location.href = BASE_URL + '/portfolio#' + section; // Redireciona com a âncora
         });
     }
 

@@ -9,6 +9,9 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+// Configurações gerais
+define('BASE_URL', $_ENV['BASE_URL']);
+
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +44,12 @@ $dotenv->load();
     <!-- Estilo Ondas Background -->
     <link rel="stylesheet" href="./css/wave.css">
 
-
     <script
         src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $_ENV['RECAPTCHA_PUBLIC_KEY']; ?>"></script>
+
+    <script>
+        const BASE_URL = "<?php echo BASE_URL; ?>";
+    </script>
 
 </head>
 </head>
@@ -286,7 +292,7 @@ $dotenv->load();
     <!-- PORTFOLIO -->
     <section id="portfolio">
 
-        <div class="portfolio">
+        <div class="portfolio" id="apps">
             <div class="portfolio-container">
                 <img src="./img/portfolio1.png" alt="">
                 <h1>Sistemas e Apps</h1>
@@ -298,7 +304,7 @@ $dotenv->load();
                 </p>
             </div>
         </div>
-        <div class="portfolio">
+        <div class="portfolio" id="sites">
             <div class="portfolio-container">
                 <img src="./img/portfolio2.png" alt="">
                 <h1>Sites Profissionais</h1>

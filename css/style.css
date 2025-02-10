@@ -596,6 +596,10 @@ main {
     max-width: 800px;
 }
 
+#portfolio a {
+    color: inherit;
+}
+
 #portfolio-popup {
     display: flex;
     padding: 0;
