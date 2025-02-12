@@ -117,7 +117,7 @@ define('BASE_URL', $_ENV['BASE_URL']);
     <!-- REDES SOCIAIS E CONTATO -->
     <div class="redes-contato">
         <ul class="redes-container">
-            <li><a href="https://www.linkedin.com/in/felipe-passos-70a075138/?originalSubdomain=br"
+            <li><a href="https://www.linkedin.com/in/felipebpassos"
                     target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
             </li>
             <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
@@ -372,7 +372,7 @@ define('BASE_URL', $_ENV['BASE_URL']);
                 <div class="contatos">
                     <button class="contato-btn" id="contato-btn">Fale Comigo</button>
                     <ul class="redes-sociais">
-                        <li><a href="https://www.linkedin.com/in/felipe-passos-70a075138/?originalSubdomain=br"
+                        <li><a href="https://www.linkedin.com/in/felipebpassos/"
                                 target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
                         </li>
                         <li><a href="https://github.com/felipebpassos" target="_blank"><button><i

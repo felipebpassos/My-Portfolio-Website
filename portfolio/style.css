@@ -41,6 +41,7 @@ html {
 
 body {
     font-family: 'AvenirLight';
+    background-color: rgb(8, 8, 8);
     background-image: url('./img/bg.webp');
     color: #fff;
 }
