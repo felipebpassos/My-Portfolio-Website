@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     $('#close-servico').click(function () {
         $('#servico-popup').addClass('hidden');
-        $('#sites, #marketing, #softwares').addClass('hidden');
+        $('#sites-servicos, #marketing, #softwares').addClass('hidden');
     });
 
     //Contato

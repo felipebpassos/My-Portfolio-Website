@@ -161,7 +161,7 @@
                                     <?php foreach ($project['links'] as $link): ?>
                                         <a href="<?= $link['url'] ?>" target="_blank">
                                             <i
-                                                class="fa-brands <?= strpos(strtolower($link['text']), 'demo') ? 'fa-link' : 'fa-github' ?>"></i>
+                                                class="<?= stripos($link['text'], 'demo') !== false ? 'fa-solid fa-link' : 'fa-brands fa-github' ?>"></i>
                                             <?= $link['text'] ?>
                                         </a>
                                     <?php endforeach; ?>

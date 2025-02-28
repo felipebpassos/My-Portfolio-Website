@@ -216,7 +216,7 @@ define('BASE_URL', $_ENV['BASE_URL']);
                     <button id="contato-submit" class="contato-submit">Fale Comigo</button>
                 </div>
                 <div class="descricao">
-                    <p>Desenvolvedor criativo, especialista na elaboração de Sites e Landing Pages de alto padrão, até
+                    <p>Desenvolvedor criativo, especialista na elaboração de Sites e Landing Pages de alto padrão, além de
                         softwares
                         completos e sob medida.</p>
                 </div>
@@ -323,7 +323,7 @@ define('BASE_URL', $_ENV['BASE_URL']);
             <h5 class="section-title">Serviços</h5>
 
             <div class="section-content">
-                <div class="servico left" data-id="sites">
+                <div class="servico left" data-id="sites-servicos">
                     <h1 style="margin-bottom: 15px;">Sites e Landing Pages</h1>
                     <div class="video-servico">
                         <video class="lazy-video" muted autoplay playsinline loop width="100%">

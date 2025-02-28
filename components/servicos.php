@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div id="sites" class="hidden" style="width: fit-content; margin: 0 auto; padding: 0 8%;">
+    <div id="sites-servicos" class="hidden" style="width: fit-content; margin: 0 auto; padding: 0 8%;">
 
         <h2 class="title">Sites e Landing Pages</h2>
 
