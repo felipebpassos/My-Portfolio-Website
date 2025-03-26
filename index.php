@@ -44,9 +44,7 @@ define('BASE_URL', $_ENV['BASE_URL']);
     <!-- Estilo Ondas Background -->
     <link rel="stylesheet" href="./css/wave.css">
 
-    <script
-        src="https://www.google.com/recaptcha/enterprise.js?render=<?php echo $_ENV['RECAPTCHA_PUBLIC_KEY']; ?>"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
         const BASE_URL = "<?php echo BASE_URL; ?>";
     </script>
@@ -237,9 +235,9 @@ define('BASE_URL', $_ENV['BASE_URL']);
 
                 <div class="section-content">
                     <p class="texto">Desenvolvedor full-stack com 4+ anos de experiência em projetos variados, desde
-                        sites modernos até o desenvolvimento completo de aplicações Web e mobile. Especializado em APIs
+                        sites modernos até o desenvolvimento completo de aplicações Web e mobile. Especialista em React, React Native, Next.js e Node.js, na criação e consumo de APIs
                         REST, bancos de
-                        dados (MySQL, MongoDB), OAuth2, pagamentos, AWS S3, entre outras tecnologias. </p>
+                        dados (MySQL, MongoDB), integrações com pagamentos, AWS EC2 e S3, entre outras tecnologias. </p>
                     <div class="stack">
                         <ul>
                             <li><img src="./img/js.png" alt="JavaScript"></li>

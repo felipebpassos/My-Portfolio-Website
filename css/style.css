@@ -69,7 +69,24 @@ body::-webkit-scrollbar {
     /* Distância do topo */
     right: 20px;
     /* Distância da direita */
+    padding: 15px 25px; /* Ajuste do padding */
+    border-radius: 5px;
     z-index: 9999;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Alerta de sucesso */
+#success-alert {
+    background-color: #28a745; /* Cor de fundo do sucesso */
+    color: white;
+    border: 1px solid #28a745; /* Borda verde */
+}
+
+/* Alerta de erro */
+#error-alert {
+    background-color: #dc3545; /* Cor de fundo do erro */
+    color: white;
+    border: 1px solid #dc3545; /* Borda vermelha */
 }
 
 .fade-in-element {

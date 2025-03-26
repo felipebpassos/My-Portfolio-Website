@@ -44,7 +44,8 @@ $dotenv->load();
                     </div>
                     <div class="m-3 col">
                         <label for="email">Whatsapp</label>
-                        <input type="text" id="whatsapp" name="whatsapp" placeholder="Ex.: (11) 9 9999-9999" maxlength="16" required>
+                        <input type="text" id="whatsapp" name="whatsapp" placeholder="Ex.: (11) 9 9999-9999"
+                            maxlength="16" required>
                     </div>
                 </div>
                 <div class="row">
@@ -54,14 +55,15 @@ $dotenv->load();
                             <div class="selected-option">
                                 <span>No que está interessado?</span>
                                 <svg width="12" height="8" viewBox="0 0 42 25">
-                                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
-                                        stroke-linecap="round"></path>
+                                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round">
+                                    </path>
                                 </svg>
                             </div>
                             <div class="options-container">
                                 <div class="option" data-value="Ajuda em um projeto">Ajuda em um projeto</div>
                                 <div class="option" data-value="Parceria de longo prazo">Parceria de longo prazo</div>
-                                <div class="option" data-value="Contratar em tempo integral">Contratar em tempo integral</div>
+                                <div class="option" data-value="Contratar em tempo integral">Contratar em tempo integral
+                                </div>
                                 <div class="option" data-value="Apenas dizer 'Oi!'">Apenas dizer "Oi!"</div>
                             </div>
                         </div>
@@ -73,8 +75,8 @@ $dotenv->load();
                             <div class="selected-option">
                                 <span>Qual seu orçamento?</span>
                                 <svg width="12" height="8" viewBox="0 0 42 25">
-                                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
-                                        stroke-linecap="round"></path>
+                                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round">
+                                    </path>
                                 </svg>
                             </div>
                             <div class="options-container">
@@ -101,11 +103,8 @@ $dotenv->load();
                     </script>
                 </div>
                 <div class="contato-form-btns">
-                    <button class="g-recaptcha"
-                        data-sitekey="6LeGTUkqAAAAAFZBhHpB1N6edJsCavtCMUr-G1Ef"
-                        data-callback='onSubmit'
-                        data-action='submit'
-                        data-size="invisible">
+                    <button class="g-recaptcha" data-sitekey="6LcFzeUqAAAAAFc6sPfChCbn7oVKH7jIe7f5wTtL" data-callback='onSubmit'
+                        data-action='submit'>
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"
                             x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20"
                             enable-background="new 0 0 20 20" space="preserve">
@@ -119,7 +118,11 @@ $dotenv->load();
                     <!-- Replace the variables below. -->
                     <script>
                         function onSubmit(token) {
-                            document.getElementById("formulario-contato").submit();
+                            try {
+                                document.getElementById("formulario-contato").submit();
+                            } catch (error) {
+                                console.error("Erro ao enviar formulário:", error);
+                            }
                         }
                     </script>
                 </div>

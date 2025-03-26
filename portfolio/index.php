@@ -39,7 +39,7 @@
                 'image' => './img/apps_e_sistemas/a3.png',
                 'title' => 'Atende+',
                 'links' => [
-                    ['url' => 'https://www.youtube.com/watch?v=OjWBcroxG0Y&t=20s', 'text' => 'Demo'],
+                    ['url' => 'https://www.youtube.com/shorts/MNBTZz9jIx4', 'text' => 'Demo'],
                     ['url' => 'https://github.com/felipebpassos/AtendeMais', 'text' => 'Readme']
                 ],
                 'description' => 'Aplicativo móvel marketplace de telemedicina para agendamentos e consultas online com profissionais cadastrados na plataforma.',
@@ -52,8 +52,18 @@
                     ['url' => 'https://members-area-react-ts-tailwind.vercel.app', 'text' => 'Demo'],
                     ['url' => 'https://github.com/felipebpassos/members-area-react-ts-tailwind', 'text' => 'Repositório']
                 ],
-                'description' => 'Plataforma Web de Área de Membros privada para cursos online. Oferece uma experiência imersiva com um design arrojado e moderno, inspirado em plataformas de streaming como Disney+ e Netflix.',
-                'tech' => ['React', 'TypeScript', 'Node.js', 'Express', 'API REST', 'JWT', 'MySQL', 'AWS S3', 'Swagger']
+                'description' => 'email: felipebpassos@gmail.com | senha: senha123 <br><br> Plataforma Web de Área de Membros privada para cursos online. Oferece uma experiência imersiva com um design arrojado e moderno, inspirado em plataformas de streaming como Disney+ e Netflix.',
+                'tech' => ['React', 'TypeScript', 'Node.js', 'Express', 'API REST', 'JWT', 'MySQL', 'AWS S3', 'Swagger', 'Tailwind CSS']
+            ],
+            [
+                'image' => './img/apps_e_sistemas/a5.png',
+                'title' => 'VIP Informática',
+                'links' => [
+                    ['url' => 'https://vipinformatica.felipepassos.dev', 'text' => 'Demo'],
+                    ['url' => 'https://github.com/felipebpassos/vipinformatica', 'text' => 'Repositório']
+                ],
+                'description' => 'Site institucional com formulário interativo no formato de ChatBot e sistema de abertura de chamados, incluindo um painel para administradores e clientes.',
+                'tech' => ['Next.js', 'TypeScript', 'Tailwind CSS', 'PHP', 'API REST', 'JWT', 'MySQL']
             ],
             [
                 'image' => './img/apps_e_sistemas/a1.png',
@@ -86,6 +96,16 @@
                 ],
                 'description' => 'Site de portfólio moderno, minimalista e visualmente atraente com uma experiência de parallax suave e sem barra de rolagem.',
                 'tech' => ['PHP', 'HTML', 'CSS', 'JavaScript', 'JQuery', 'Bootstrap', 'MySQL']
+            ],
+            [
+                'image' => './img/apps_e_sistemas/a5.png',
+                'title' => 'VIP Informática',
+                'links' => [
+                    ['url' => 'https://vipinformatica.felipepassos.dev', 'text' => 'Demo'],
+                    ['url' => 'https://github.com/felipebpassos/vipinformatica', 'text' => 'Repositório']
+                ],
+                'description' => 'Site institucional com formulário interativo no formato de ChatBot e sistema de abertura de chamados, incluindo um painel para administradores e clientes.',
+                'tech' => ['Next.js', 'TypeScript', 'Tailwind CSS', 'PHP', 'API REST', 'JWT', 'MySQL']
             ],
             [
                 'image' => './img/apps_e_sistemas/a1.png',
