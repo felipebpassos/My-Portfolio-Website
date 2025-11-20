@@ -7,7 +7,18 @@ const scrollIcon = document.getElementById('scroll-ico');
 const menuItems = document.querySelectorAll('.menu li');
 let currentSection = 0;
 let isScrolling = false;
-let startY = 0; // Para armazenar a posição inicial do toque
+let startY = null; // Para armazenar a posicao inicial do toque
+const nativeScrollSelector = 'input, textarea, select, [data-allow-native-scroll]';
+
+function allowsNativeScroll(target) {
+    if (!target) {
+        return false;
+    }
+    const textNodeType = typeof Node !== 'undefined' ? Node.TEXT_NODE : 3;
+    const element = target.nodeType === textNodeType ? target.parentElement : target;
+    return element && element.closest(nativeScrollSelector);
+}
+
 
 scrollToSection(currentSection);
 
@@ -49,22 +60,37 @@ window.addEventListener('keydown', (event) => {
 
 // Função para capturar a posição inicial do toque
 window.addEventListener('touchstart', (event) => {
+    if (allowsNativeScroll(event.target)) {
+        startY = null;
+        return;
+    }
     startY = event.touches[0].clientY;
 });
 
 // Função para detectar o movimento de deslize (scroll) em dispositivos móveis
 window.addEventListener('touchmove', (event) => {
-    if (isScrolling) return;
+    if (allowsNativeScroll(event.target)) {
+        startY = null;
+        return;
+    }
+
+    if (isScrolling) {
+        event.preventDefault();
+        return;
+    }
+
+    if (startY === null) {
+        startY = event.touches[0].clientY;
+    }
 
     const deltaY = startY - event.touches[0].clientY;
 
-    if (Math.abs(deltaY) > 30) { // Limite para evitar mudanças acidentais de seção
+    if (Math.abs(deltaY) > 30) { // Limite para evitar mudancas acidentais de secao
+        event.preventDefault();
         isScrolling = true;
         if (deltaY > 0) {
-            // Rolar para baixo
             currentSection = Math.min(currentSection + 1, sections.length - 1);
         } else {
-            // Rolar para cima
             currentSection = Math.max(currentSection - 1, 0);
         }
 
@@ -75,7 +101,7 @@ window.addEventListener('touchmove', (event) => {
             isScrolling = false;
         }, 400); // Tempo de atraso (1,5 segundos)
     }
-});
+}, { passive: false });
 
 // Funções de navegação por clique
 logoBtn.addEventListener('click', function () {
