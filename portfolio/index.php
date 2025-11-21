@@ -191,8 +191,11 @@
                                         <?php else: ?>
                                             <a href="<?= $link['url'] ?>" target="_blank">
                                                 <i
-                                                    class="<?= stripos($link['text'], 'demo') !== false ? 'fa-solid fa-link' : 'fa-brands fa-github' ?>"></i>
-                                                <?= $link['text'] ?>
+                                                    class="<?= (stripos($link['text'], 'demo') !== false || stripos($link['text'], 'link') !== false) ? 'fa-solid fa-link' : 'fa-brands fa-github' ?>"></i>
+                                                <?php
+                                                    $showLinkLabel = stripos($link['text'], 'demo') !== false && $project['title'] !== 'Atende+';
+                                                    echo $showLinkLabel ? 'Link' : $link['text'];
+                                                ?>
                                             </a>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
@@ -234,7 +237,6 @@
                     project.style.setProperty("--fade-delay", `${index * 120}ms`);
                 });
 
-                // force reflow so animation can restart on tab change
                 void document.body.offsetWidth;
 
                 projects.forEach(project => project.classList.add("fade-in"));
@@ -255,7 +257,6 @@
 
             const initialCategory = window.location.hash === "#sites" ? "sites" : "apps";
             showTab(initialCategory, { smooth: false });
-            // garante que o hash não force o scroll inicial
             setTimeout(() => scrollToTop("auto"), 0);
 
             tabs.forEach(tab => {

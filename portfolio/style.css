@@ -181,6 +181,12 @@ main {
     margin-right: 5px;
 }
 
+/* Aumenta levemente os ícones da Play Store e Apple para melhor leitura */
+.links a i.fa-google-play,
+.links a i.fa-apple {
+    font-size: 1.4rem;
+}
+
 .links a:hover {
     text-decoration: underline;
 }
