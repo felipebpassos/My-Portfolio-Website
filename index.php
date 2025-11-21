@@ -71,7 +71,7 @@ define('BASE_URL', $_ENV['BASE_URL']);
 
     <!-- LOGO -->
     <button id="logo" class="logo">
-        <h1>FELIPE PASSOS</h1>
+        <h1>&lt;FELIPE PASSOS/&gt;</h1>
     </button>
 
     <!-- NAV BAR -->
@@ -115,8 +115,8 @@ define('BASE_URL', $_ENV['BASE_URL']);
     <!-- REDES SOCIAIS E CONTATO -->
     <div class="redes-contato">
         <ul class="redes-container">
-            <li><a href="https://www.linkedin.com/in/felipebpassos"
-                    target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+            <li><a href="https://www.linkedin.com/in/felipebpassos" target="_blank"><button><i
+                            class="fa-brands fa-linkedin-in"></i></button></a>
             </li>
             <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
                             class="fa-brands fa-github"></i></button></a></li>
@@ -208,13 +208,15 @@ define('BASE_URL', $_ENV['BASE_URL']);
 
                 <p class="cargo">Desenvolvedor Web e Mobile</p>
                 <img src="./img/felipe_passos.png" alt="">
-                <h1>Soluções<br><span id="dynamic-text" class="typed-text">modernas</span><span class="blinking-cursor">|</span>
+                <h1>Soluções<br><span id="dynamic-text" class="typed-text">modernas</span><span
+                        class="blinking-cursor">|</span>
                 </h1>
                 <div class="contato-submit-box">
                     <button id="contato-submit" class="contato-submit">Fale Comigo</button>
                 </div>
                 <div class="descricao">
-                    <p>Desenvolvedor criativo, especialista na elaboração de Sites e Landing Pages de alto padrão, além de
+                    <p>Desenvolvedor criativo, especialista na elaboração de Sites e Landing Pages de alto padrão, além
+                        de
                         softwares
                         completos e sob medida.</p>
                 </div>
@@ -235,33 +237,35 @@ define('BASE_URL', $_ENV['BASE_URL']);
 
                 <div class="section-content">
                     <p class="texto">Desenvolvedor full-stack com 4+ anos de experiência em projetos variados, desde
-                        sites modernos até o desenvolvimento completo de aplicações Web e mobile. Especialista em React, React Native, Next.js e Node.js, na criação e consumo de APIs
+                        sites modernos até o desenvolvimento completo de aplicações Web e mobile. Especialista em React,
+                        React Native, Next.js e Node.js, na criação e consumo de APIs
                         REST, bancos de
                         dados (MySQL, MongoDB), integrações com pagamentos, AWS EC2 e S3, entre outras tecnologias. </p>
                     <div class="stack">
                         <ul>
-                            <li><img src="./img/js.png" alt="JavaScript"></li>
-                            <li><img src="./img/type.png" alt="TypeScript"></li>
-                            <li><img src="./img/react.png" alt="React"></li>
-                            <li><img src="./img/node.png" alt="NodeJs"></li>
-                            <li><img src="./img/mysql.png" alt="MySQL"></li>
-                            <li><img src="./img/redis.png" alt="Redis"></li>
-                            <li><img src="./img/aws.png" alt="AWS"></li>
+                            <li data-tooltip="JavaScript"><img src="./img/js.png" alt="JavaScript"></li>
+                            <li data-tooltip="TypeScript"><img src="./img/type.png" alt="TypeScript"></li>
+                            <li data-tooltip="React/React Native"><img src="./img/react.png" alt="React"></li>
+                            <li data-tooltip="Node.js"><img src="./img/node.png" alt="NodeJs"></li>
+                            <li data-tooltip="MySQL"><img src="./img/mysql.png" alt="MySQL"></li>
+                            <li data-tooltip="Redis"><img src="./img/redis.png" alt="Redis"></li>
+                            <li data-tooltip="AWS"><img src="./img/aws.png" alt="AWS"></li>
                         </ul>
                         <ul aria-hidden="true">
                             <!-- Duplicado para garantir o loop contínuo -->
-                            <li><img src="./img/js.png" alt="JavaScript"></li>
-                            <li><img src="./img/type.png" alt="TypeScript"></li>
-                            <li><img src="./img/react.png" alt="React"></li>
-                            <li><img src="./img/node.png" alt="NodeJs"></li>
-                            <li><img src="./img/mysql.png" alt="MySQL"></li>
-                            <li><img src="./img/redis.png" alt="Redis"></li>
-                            <li><img src="./img/aws.png" alt="AWS"></li>
+                            <li data-tooltip="JavaScript"><img src="./img/js.png" alt="JavaScript"></li>
+                            <li data-tooltip="TypeScript"><img src="./img/type.png" alt="TypeScript"></li>
+                            <li data-tooltip="React/React Native"><img src="./img/react.png" alt="React"></li>
+                            <li data-tooltip="Node.js"><img src="./img/node.png" alt="NodeJs"></li>
+                            <li data-tooltip="MySQL"><img src="./img/mysql.png" alt="MySQL"></li>
+                            <li data-tooltip="Redis"><img src="./img/redis.png" alt="Redis"></li>
+                            <li data-tooltip="AWS"><img src="./img/aws.png" alt="AWS"></li>
                         </ul>
                     </div>
                     <div class="cv-box">
                         <div class="cv">
-                            <a href="https://felipepassos.dev/cv" target="_blank" style="display: flex; justify-content: center; align-items: center;">
+                            <a href="https://felipepassos.dev/cv" target="_blank"
+                                style="display: flex; justify-content: center; align-items: center;">
                                 DOWNLOAD CV
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
                                     style="margin-left: 3px;">
@@ -370,8 +374,8 @@ define('BASE_URL', $_ENV['BASE_URL']);
                 <div class="contatos">
                     <button class="contato-btn" id="contato-btn">Fale Comigo</button>
                     <ul class="redes-sociais">
-                        <li><a href="https://www.linkedin.com/in/felipebpassos/"
-                                target="_blank"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                        <li><a href="https://www.linkedin.com/in/felipebpassos/" target="_blank"><button><i
+                                        class="fa-brands fa-linkedin-in"></i></button></a>
                         </li>
                         <li><a href="https://github.com/felipebpassos" target="_blank"><button><i
                                         class="fa-brands fa-github"></i></button></a></li>
