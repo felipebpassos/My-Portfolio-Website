@@ -36,18 +36,18 @@
                     ['url' => 'https://play.google.com/store/apps/details?id=com.ritmodoesporte.ritmoatletas', 'icon' => 'fa-brands fa-google-play'],
                     ['url' => 'https://apps.apple.com/us/app/ritmo-atletas/id1508732883', 'icon' => 'fa-brands fa-apple']
                 ],
-                'description' => 'Aplicativo móvel marketplace de telemedicina para agendamentos e consultas online com profissionais cadastrados na plataforma.',
+                'description' => 'Versão atual (V2) do Ritmo Atletas, app de gestão financeira e administrativa para escolinhas esportivas, integrante do ecossistema Ritmo do Esporte.',
                 'tech' => ['React Native', 'TypeScript', 'Apollo Client', 'GraphQL', 'Redux']
             ],
             [
-                'image' => './img/apps_e_sistemas/a1.png',
-                'title' => 'Pomar do Brasil',
+                'image' => './img/apps_e_sistemas/a2.png',
+                'title' => 'Área de Cinema',
                 'links' => [
-                    ['url' => 'https://pomardobrasil.com.br', 'text' => 'Demo'],
-                    ['url' => 'https://github.com/felipebpassos/pomar', 'text' => 'Repositório']
+                    ['url' => 'https://reelsdecinema.areadecinema.com', 'text' => 'Demo'],
+                    ['url' => 'https://github.com/felipebpassos/members-area-react-ts-tailwind', 'text' => 'Repositório']
                 ],
-                'description' => 'E-commerce simples e site institucional para uma das maiores fábricas de polpa de frutas do Nordeste: Pomar do Brasil.',
-                'tech' => ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL']
+                'description' => 'email: felipebpassos@gmail.com | senha: senha123 <br><br> Plataforma Web de Área de Membros moderna.',
+                'tech' => ['React', 'TypeScript', 'Node.js', 'Express', 'API REST', 'JWT', 'MySQL', 'AWS S3', 'Swagger', 'Tailwind CSS']
             ],
             [
                 'image' => './img/apps_e_sistemas/a3.png',
@@ -60,14 +60,14 @@
                 'tech' => ['React Native', 'Node.js', 'Express', 'API REST', 'JWT', 'MySQL', 'Redis', 'Redux', 'AWS S3', 'Websockets', 'WebRTC', 'PeerJS']
             ],
             [
-                'image' => './img/apps_e_sistemas/a2.png',
-                'title' => 'Área de Cinema',
+                'image' => './img/apps_e_sistemas/a1.png',
+                'title' => 'Pomar do Brasil',
                 'links' => [
-                    ['url' => 'https://reelsdecinema.areadecinema.com', 'text' => 'Demo'],
-                    ['url' => 'https://github.com/felipebpassos/members-area-react-ts-tailwind', 'text' => 'Repositório']
+                    ['url' => 'https://pomardobrasil.com.br', 'text' => 'Demo'],
+                    ['url' => 'https://github.com/felipebpassos/pomar', 'text' => 'Repositório']
                 ],
-                'description' => 'email: felipebpassos@gmail.com | senha: senha123 <br><br> Plataforma Web de Área de Membros moderna.',
-                'tech' => ['React', 'TypeScript', 'Node.js', 'Express', 'API REST', 'JWT', 'MySQL', 'AWS S3', 'Swagger', 'Tailwind CSS']
+                'description' => 'E-commerce simples e site institucional para uma das maiores fábricas de polpa de frutas do Nordeste: Pomar do Brasil.',
+                'tech' => ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL']
             ],
             [
                 'image' => './img/apps_e_sistemas/a5.png',
@@ -215,19 +215,50 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            function showTab(category) {
-                document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
-                document.querySelectorAll(".content").forEach(c => c.style.display = "none");
+            const tabs = document.querySelectorAll(".tab");
+            const contents = document.querySelectorAll(".content");
+
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            function scrollToTop(behavior = "smooth") {
+                window.scrollTo({ top: 0, behavior });
+            }
+
+            function animateProjects(category) {
+                const projects = document.querySelectorAll(`#${category} .project`);
+
+                projects.forEach((project, index) => {
+                    project.classList.remove("fade-in");
+                    project.style.setProperty("--fade-delay", `${index * 120}ms`);
+                });
+
+                // force reflow so animation can restart on tab change
+                void document.body.offsetWidth;
+
+                projects.forEach(project => project.classList.add("fade-in"));
+            }
+
+            function showTab(category, { smooth = true } = {}) {
+                tabs.forEach(tab => tab.classList.remove("active"));
+                contents.forEach(c => c.style.display = "none");
                 document.getElementById(category).style.display = "grid";
-                document.querySelectorAll(".tab").forEach(tab => {
+                tabs.forEach(tab => {
                     if (tab.innerText.includes("Sites") && category === "sites") tab.classList.add("active");
                     if (tab.innerText.includes("Sistemas") && category === "apps") tab.classList.add("active");
                 });
+
+                scrollToTop(smooth ? "smooth" : "auto");
+                animateProjects(category);
             }
 
-            if (window.location.hash === "#sites") showTab("sites");
+            const initialCategory = window.location.hash === "#sites" ? "sites" : "apps";
+            showTab(initialCategory, { smooth: false });
+            // garante que o hash não force o scroll inicial
+            setTimeout(() => scrollToTop("auto"), 0);
 
-            document.querySelectorAll(".tab").forEach(tab => {
+            tabs.forEach(tab => {
                 tab.addEventListener("click", function () {
                     const category = this.innerText.includes("Sites") ? "sites" : "apps";
                     showTab(category);
