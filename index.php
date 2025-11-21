@@ -264,7 +264,7 @@ define('BASE_URL', $_ENV['BASE_URL']);
                     </div>
                     <div class="cv-box">
                         <div class="cv">
-                            <a href="https://felipepassos.dev/cv" target="_blank"
+                            <a href="./felipe-passos-resume.pdf" download
                                 style="display: flex; justify-content: center; align-items: center;">
                                 DOWNLOAD CV
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
