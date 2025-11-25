@@ -46,8 +46,8 @@
                     ['url' => 'https://reelsdecinema.areadecinema.com', 'text' => 'Demo'],
                     ['url' => 'https://github.com/felipebpassos/members-area-react-ts-tailwind', 'text' => 'Repositório']
                 ],
-                'description' => 'email: felipebpassos@gmail.com | senha: senha123 <br><br> Plataforma Web de Área de Membros moderna.',
-                'tech' => ['React', 'TypeScript', 'Node.js', 'Express', 'API REST', 'JWT', 'MySQL', 'AWS S3', 'Swagger', 'Tailwind CSS']
+                'description' => 'email: teste@email.com | senha: senha123 <br><br> Plataforma de Área de Membros para cursos com pagamentos integrados, atualização em tempo real de usuários, gestão de planos, entre outras funcionalidades.',
+                'tech' => ['React', 'TypeScript', 'Node.js', 'Express', 'API REST', 'JWT', 'MySQL', 'AWS S3', 'Swagger', 'Tailwind CSS', 'Webhooks']
             ],
             [
                 'image' => './img/apps_e_sistemas/a3.png',
@@ -193,8 +193,8 @@
                                                 <i
                                                     class="<?= (stripos($link['text'], 'demo') !== false || stripos($link['text'], 'link') !== false) ? 'fa-solid fa-link' : 'fa-brands fa-github' ?>"></i>
                                                 <?php
-                                                    $showLinkLabel = stripos($link['text'], 'demo') !== false && $project['title'] !== 'Atende+';
-                                                    echo $showLinkLabel ? 'Link' : $link['text'];
+                                                $showLinkLabel = stripos($link['text'], 'demo') !== false && $project['title'] !== 'Atende+';
+                                                echo $showLinkLabel ? 'Link' : $link['text'];
                                                 ?>
                                             </a>
                                         <?php endif; ?>
