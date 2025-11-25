@@ -215,10 +215,8 @@ define('BASE_URL', $_ENV['BASE_URL']);
                     <button id="contato-submit" class="contato-submit">Fale Comigo</button>
                 </div>
                 <div class="descricao">
-                    <p>Desenvolvedor criativo, especialista na elaboração de Sites e Landing Pages de alto padrão, além
-                        de
-                        softwares
-                        completos e sob medida.</p>
+                    <p>Desenvolvedor criativo, especialista na criação de sites, sistemas e Apps de alto padrão,
+                        sob medida para seu negócio.</p>
                 </div>
             </div>
 

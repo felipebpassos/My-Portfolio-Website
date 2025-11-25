@@ -136,7 +136,7 @@ a {
 #loader {
   height: 80px;
   width: 320px;
-  background: rgb(15, 15, 15) url("../img/FELIPE_LOGO.png") center no-repeat;
+  background: rgb(15, 15, 15) url("../img/FELIPE_LOGO.webp") center no-repeat;
   background-size: contain;
   position: fixed;
   top: 50%;
