@@ -221,3 +221,19 @@ main {
         margin-bottom: 60px;
     }
 }
+
+@media (max-width: 420px) {
+    .tabs {
+        justify-content: stretch;
+        padding: 12px 10px;
+    }
+
+    .tab {
+        flex: 1 1 50%;
+        padding: 12px 14px;
+        font-size: 14px;
+        border-bottom-width: 2px;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
